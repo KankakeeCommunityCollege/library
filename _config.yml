@@ -1,21 +1,24 @@
 title: "Kankakee Community College"
-site_name: "KCC Startup Template"
-public-url: "https://www.kcc.edu" ## This gets generated into the link that displays in the footer (the one above the social icons)
-url: 'URL is needed for robots.txt to work properly' ## NO TRAILING SLASHES!!/<--nope
+site_name: "Library"
+public-url: "https://library.kcc.edu" ## This gets generated into the link that displays in the footer (the one above the social icons)
+url: 'https://library.kcc.edu' ## NO TRAILING SLASHES!!/<--nope
 timezone: America/Chicago
 theme: "kcc-gem-theme"
 google-tag_key: Google Tag Manager key goes here
 #core_site: true
 #translate: true ## Uncomment to activate Google Translate Powers!!
 nav_links:
-  - link_text: Home
-    link_href: ''
+  - link_text: Resources
+    link_href: '#'
     button: false
-  - link_text: Landing Page
-    link_href: 'landing-page'
+  - link_text: Policies
+    link_href: '#'
     button: false
-  - link_text: Accordion
-    link_href: accordion
+  - link_text: Help
+    link_href: '#'
+    button: false
+  - link_text: About
+    link_href: '#'
     button: false
 #  - link_text: Example External Link
 #    link_href: 'https://example-external-link.com'
@@ -38,6 +41,8 @@ collections:
   contacts:
     output: false
   accordions:
+    output: false
+  tabs:
     output: false
 defaults:
 - scope:
