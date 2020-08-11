@@ -8,17 +8,20 @@ google-tag_key: Google Tag Manager key goes here
 #core_site: true
 #translate: true ## Uncomment to activate Google Translate Powers!!
 nav_links:
-  - link_text: Resources
-    link_href: '#'
+  - link_text: Factulty Resources
+    link_href: 'https://kcc.libguides.com/facultyservices'
+    button: false
+  - link_text: Tutoring
+    link_href: tutoring
     button: false
   - link_text: Policies
-    link_href: '#'
+    link_href: 'policies'
     button: false
   - link_text: Help
-    link_href: '#'
+    link_href: 'https://kcc.libguides.com/canvas'
     button: false
   - link_text: About
-    link_href: '#'
+    link_href: 'about'
     button: false
 #  - link_text: Example External Link
 #    link_href: 'https://example-external-link.com'
