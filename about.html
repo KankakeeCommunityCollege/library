@@ -3,9 +3,8 @@ title: About
 baseurl: ../
 layout: page
 description: ''
-featured_image:
-- assets/img/kcc-placeholder.png
-- Alternate text for image.
+featured_image: assets/img/kcc-placeholder.png
+featured_image_alt: Alternate text for image.
 ---
 
 <main>
@@ -13,7 +12,7 @@ featured_image:
     <div class="row">
       <div class="col">
         <div class="text-center mb-4">
-          <img src="{{ page.baseurl }}{{ page.featured_image[0] }}" class="img__full-width" alt="{{ page.featured_image[1] }}">
+          <img src="{{ page.baseurl }}{{ page.featured_image }}" class="img__full-width" alt="{{ page.featured_image_alt }}">
         </div>
 
         <p>The Student Success Center contains the Miner Memorial Library, Tutoring Services, and our Teaching and Learning Center.</p>
