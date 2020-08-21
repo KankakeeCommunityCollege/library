@@ -3,20 +3,24 @@ layout: page
 baseurl: ''
 title: Library
 description: ''
+slides:
+  - image: uploads/library-renovation-2019-banner.png
+    alt-text: "Construction themed banner: Renovation Underway! Follow our progress. updates, photos, timelines and more. Get Details."
+    url: 'https://kcc.libguides.com/renovation'
+  - image: assets/img/kcc-placeholder.png
+    alt-text: The Power of Education
+    url: '#'
+    text: 'The **POWER** of Education'
+  - image: assets/img/kcc-placeholder.png
+    alt-text: The Power of Giving
+    url: '/landing-page'
+    text: The **POWER** of Community
 ---
 
 <!-- Build -->
 <main>
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="text-center mb-2">
-          <a href="https://kcc.libguides.com/renovation" target="_blank" rel="noopener noreferrer" title="Contruction themed banner: Renovation Underway! Follow our progress. updates, photos, timelines and more. Get Details.">
-            <img src="{{ page.baseurl }}uploads/library-renovation-2019-banner.png" class="img__full-width" alt="Contruction themed banner: Renovation Underway! Follow our progress. updates, photos, timelines and more. Get Details.">
-          </a>
-        </div>
-      </div>
-    </div>
+    {% include hero-slider.html %}
 
     <div class="row mb-3">
       <div class="col margins__col--top home__col--heading-underline">
