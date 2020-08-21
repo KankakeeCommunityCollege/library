@@ -3,12 +3,19 @@ title: About
 baseurl: ../
 layout: page
 description: ''
+featured_image:
+- assets/img/kcc-placeholder.png
+- Alternate text for image.
 ---
 
 <main>
   <div class="container">
     <div class="row">
       <div class="col">
+        <div class="text-center mb-4">
+          <img src="{{ page.baseurl }}{{ page.featured_image[0] }}" class="img__full-width" alt="{{ page.featured_image[1] }}">
+        </div>
+
         <p>The Student Success Center contains the Miner Memorial Library, Tutoring Services, and our Teaching and Learning Center.</p>
         <p>The Harold & Jean Miner Memorial Library collection includes books relating to the curriculum, magazine and journal subscriptions, audiobooks, DVDs and videos, children’s, young adult, and adult fiction books, and access to a variety of online databases. The library also offers group and quiet study rooms, as well as access to computers and printing.</p>
         <p>Tutoring Services offers assistance in most core subjects, including writing for any course, math, accounting, and some sciences. In-person tutoring services are located on the second floor of the Student Success Center, and online tutoring services offer a way to get help without having to leave home.</p>

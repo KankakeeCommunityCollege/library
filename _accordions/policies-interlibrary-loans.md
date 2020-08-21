@@ -25,9 +25,10 @@ Patrons should first search [WorldCat](http://www.firstsearch.org/){: target="_b
 
 Patrons should first search KCC's [online databases](http://kcc.libguides.com/az.php){: target="_blank" rel="noopener noreferrer" } to ensure that access is not already available. If the article is unavailable, please submit a request using the following form.
 
- <div id="form_button_8d49f10dcb7f170c0936a1866e70010a"></div><script type="text/javascript" src="https://kcc.libwizard.com/embed_button.php?id=8d49f10dcb7f170c0936a1866e70010a&noheader=0&type=button&open-button-text=Request%20an%20Article&open-button-color=%23003768&text-color=%23ffffff" crossorigin="anonymous"></script>
+ <div class="mb-4" id="form_button_8d49f10dcb7f170c0936a1866e70010a"></div><script type="text/javascript" src="https://kcc.libwizard.com/embed_button.php?id=8d49f10dcb7f170c0936a1866e70010a&noheader=0&type=button&open-button-text=Request%20an%20Article&open-button-color=%23003768&text-color=%23ffffff" crossorigin="anonymous"></script>
 
 ### Pick-up and return
+{: .typography__h3 }
 
 Patrons will be notified by email or phone when the item has arrived. Materials are available for pick up at the circulation desk with a valid KCC ID card. Unclaimed books will be returned to the lending library two weeks after date of receipt. Unclaimed photocopies will be discarded after 30 days. 
 
@@ -36,5 +37,6 @@ Materials are generally loaned for four weeks, but some libraries have shorter l
 Materials may be returned to the circulation desk or the library book drop.
 
 ### Renewals
+{: .typography__h3 }
 
 Requests for renewal may be brought to the circulation desk, or emailed to [bcastillo@kcc.edu](mailto:bcastillo@kcc.edu) at least three days before the due date. The lending library will be contacted to request a renewal. 

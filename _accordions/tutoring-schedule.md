@@ -9,4 +9,4 @@ order: 4
 
 Open Monday, August 17 to Thursday, December 10. Tutors are available with reduced hours when classes are not in session.
 
-<iframe src="../schedule-widget/" frameborder="0" width="100%" class="iframe iframeJSHeight"></iframe>
+<iframe src="../schedule-widget/" frameborder="0" width="100%" class="iframe iframeTableStyling iframeJSHeight"></iframe>

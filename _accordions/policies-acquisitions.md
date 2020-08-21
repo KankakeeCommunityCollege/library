@@ -11,7 +11,7 @@ The acquisition of materials for the Harold & Jean Miner Memorial Library is a r
 
 Suggestions for new materials may be submitted at any time. Bibliographies, published reviews, professional journal citations, as well as faculty suggestions are included in the selection process. 
 
- <div id="form_button_7e6d35d3a6f360bde3c36cb71ef0975c"></div><script type="text/javascript" src="https://kcc.libwizard.com/embed_button.php?id=7e6d35d3a6f360bde3c36cb71ef0975c&noheader=0&type=button&open-button-text=Request%20Book%20for%20Purchase&open-button-color=%23003768&text-color=%23ffffff" crossorigin="anonymous"></script>
+ <div class="mb-4" id="form_button_7e6d35d3a6f360bde3c36cb71ef0975c"></div><script type="text/javascript" src="https://kcc.libwizard.com/embed_button.php?id=7e6d35d3a6f360bde3c36cb71ef0975c&noheader=0&type=button&open-button-text=Request%20Book%20for%20Purchase&open-button-color=%23003768&text-color=%23ffffff" crossorigin="anonymous"></script>
 
 ### Areas of Instruction
 {: .typography__h3 }
@@ -28,6 +28,6 @@ Suggestions for additions and deletions to the periodical collection are request
 
 Non-print materials, in particular DVD/video cassette recordings, must first be requested for preview. Timelines and procedures are detailed on the form. 
 
-<div id="form_button_a37341e0118d28a2be7a533beacbdcf6"></div><script type="text/javascript" src="https://kcc.libwizard.com/embed_button.php?id=a37341e0118d28a2be7a533beacbdcf6&noheader=0&type=button&open-button-text=Request%20DVD%20for%20Purchase&open-button-color=%23003768&text-color=%23ffffff" crossorigin="anonymous"></script>
+<div class="mb-3" id="form_button_a37341e0118d28a2be7a533beacbdcf6"></div><script type="text/javascript" src="https://kcc.libwizard.com/embed_button.php?id=a37341e0118d28a2be7a533beacbdcf6&noheader=0&type=button&open-button-text=Request%20DVD%20for%20Purchase&open-button-color=%23003768&text-color=%23ffffff" crossorigin="anonymous"></script>
 
 Since the entire process can take up to four months, this schedule must be followed when ordering a video/DVD. To order items for use during the spring semester, submit orders in August or September. To order items for use during the fall semester, submit orders in January or February.  Preview ordering ends in March in order to complete all previews and returns prior to May finals.
