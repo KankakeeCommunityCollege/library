@@ -11,6 +11,6 @@ To make an online tutoring appointment, visit kcc.tutorocean.com and search for 
 
 The video below shows you how to make an online appointment with a KCC tutor.
 
-<iframe title="Tutor Ocean" width="640" height="360" allowTransparency="true" mozallowfullscreen webkitallowfullscreen allowfullscreen style="background-color:transparent;" frameBorder="0" src="https://app.vidgrid.com/embed/zWHrS7h7pT8i"></iframe>
+<iframe title="Tutor Ocean" class="iframeJSHeight" width="640" height="460" allowTransparency="true" mozallowfullscreen webkitallowfullscreen allowfullscreen style="background-color:transparent;" frameBorder="0" src="https://app.vidgrid.com/embed/zWHrS7h7pT8i"></iframe>
  
 Student Guide to using [TutorOcean](http://d1qahdsb4j3l6a.cloudfront.net/assets/external/Student+Guide+v1.0.pdf){: target="_blank" rel="noopener noreferrer"}
