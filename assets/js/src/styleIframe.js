@@ -48,7 +48,7 @@ function styleIframe() {
     for (let i = 0, len = list.length; i < len; i++ ) {
       const th = list[i];
       
-      i === 0 || i === 1 ? th.classList.add('all') : th.classList.add('none');
+      i === 0 || i === 1 ? th.classList.add('all') : th.classList.add('min-desktop');
     }
     
     $(table).DataTable({
