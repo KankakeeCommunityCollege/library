@@ -14,14 +14,76 @@ slides:
   - image: assets/img/kcc-placeholder.png
     alt-text: The Power of Giving
     url: '/landing-page'
-    text: The **POWER** of Community
+    text: 'The **POWER** of Community'
+page_actions:
+  - link: 'https://vufind.carli.illinois.edu/vf-kcc/'
+    label: "Link to KCC's Searchable database"
+    icon_src: 'uploads/searchable-database-icon.svg'
+    icon_alt: 'Icon of a database with a search icon over it'
+    service: KCC Catalog
+    description: 'Searchable database of books, reference materials and more available from the KCC Library.'
+    button_text: 'Get Started'
+  - link: 'https://kcc.libguides.com/az.php'
+    label: 'Find Articles'
+    icon_src: 'uploads/article-icon.svg'
+    icon_alt: 'Icon of an article with a search icon over it'
+    service: Find Articles
+    description: 'Searchable list of article databases available through the KCC Library.'
+    button_text: 'Find Articles'
+  - link: 'https://kcc.libguides.com/?b=s'
+    label: 'Find subjects'
+    icon_src: 'uploads/search-subjects-cutout.svg'
+    icon_alt: 'Icon of lines of text with a seatch glass-icon over them'
+    service: 'Find Subject Guides'
+    description: 'Searchable list of subject guides available through the KCC Library.'
+    button_text: 'Find Subjects'
+  - link: 'https://kcc.libguides.com/?b=s'
+    label: 'Find eBooks'
+    icon_src: 'uploads/ebooks.svg'
+    icon_alt: 'Icon of a laptop with a book displayling on the screen'
+    service: 'Find eBooks'
+    description: 'Searchable list eBooks available through the KCC Library.'
+    button_text: 'Find eBooks'
+  - link: 'https://login.proxy01.kcc.edu/login?qurl=http%3a%2f%2fdigital.films.com%2fPortalPlayLists.aspx%3faid%3d2475'
+    label: 'Find films on-demand'
+    icon_src: 'uploads/ondemand.svg'
+    icon_alt: 'Icon a monitor with a play-symbol displaying on the screen'
+    service: 'Films on Demand'
+    description: 'Searchable list of films available on demand from the KCC Library.'
+    button_text: 'Find Films'
+  - link: 'https://kcc.libguides.com/tutorials'
+    label: 'Help and tutorials'
+    icon_src: uploads/help.svg
+    icon_alt: 'Help-icon of a question-mark inside a circle'
+    service: 'Help & Tutorials'
+    description: 'Video tutorials for most library databases in addition to links to other helpful tools and resources.'
+    button_text: 'Help'
 ---
 
 <!-- Build -->
-<main>
-  <div class="container">
-    {% include hero-slider.html %}
 
+<main>
+  <div class="container background__color--tan">
+    {% include hero-slider.html %}
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="typography__call-to-action editable">Services</h2>
+      </div>
+      {% for action in page.page_actions %}
+      <div class="content__min-height col-md-6 col-lg-4 mb-5 text-center d-flex flex-column align-items-center justify-content-center">
+        <a href="{% unless action.link contains 'http://' or action.link contains 'https://' %}{{ page.baseurl }}{% endunless %}{{ action.link }}" aria-label="{{ action.label }}">
+          <img src="{{ page.baseurl }}{{ action.icon_src }}" class="svg__icon img-fluid w-40 mb-3" alt="{{ action.icon_alt }}" />
+        </a>
+        <a class="links__no-underline" href="{% unless action.link contains 'http://' or action.link contains 'https://' %}{{ page.baseurl }}{% endunless %}{{ action.link }}">
+          <h4 class="typography__orange-h4 typography__sm-sup">{{ action.service }}</h4>
+          <p class="typography__h5--description content__max-width mx-auto">{{ action.description }}</p>
+          <a href="{{ action.link }}" class="mt-auto btn btn-primary">{{ action.button_text }}</a>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container">
     <div class="row mb-3">
       <div class="col margins__col--top home__col--heading-underline">
         <h3 class="typography__section--heading mb-4">Harold & Jean Miner Memorial&nbsp;Library</h3>

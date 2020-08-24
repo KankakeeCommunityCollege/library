@@ -35,3 +35,19 @@ img.center-image {
 .center-this-text {
   text-align: center;
 }
+
+@media screen and (min-width: 768px) {
+  .content__min-height {
+    min-height: 430px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .content__min-height {
+    min-height: 450px;
+  }
+}
+
+.content__max-width {
+  max-width: 320px;
+}
