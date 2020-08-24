@@ -27,7 +27,7 @@ slides:
 page_actions:
   - link: 'https://vufind.carli.illinois.edu/vf-kcc/'
     label: "Link to KCC's Searchable database"
-    icon_src: 'uploads/searchable-database-icon.svg'
+    icon_src: 'uploads/searchable-database-icon_bolder.svg'
     icon_alt: 'Icon of a database with a search icon over it'
     service: KCC Catalog
     description: 'Searchable database of books, reference materials and more available from the KCC Library.'
@@ -78,10 +78,12 @@ page_actions:
       <div class="col-12 text-center">
         <h2 class="typography__call-to-action editable">Services</h2>
       </div>
+      {% assign icon = site.icons %}
       {% for action in page.page_actions %}
+      {% assign index = forloop.index0 %}
       <div class="content__min-height col-md-6 col-lg-4 mb-5 text-center d-flex flex-column align-items-center justify-content-center">
         <a href="{% unless action.link contains 'http://' or action.link contains 'https://' %}{{ page.baseurl }}{% endunless %}{{ action.link }}" aria-label="{{ action.label }}">
-          <img src="{{ page.baseurl }}{{ action.icon_src }}" class="svg__icon img-fluid w-40 mb-3" alt="{{ action.icon_alt }}" />
+          {{ icon[index] }}
         </a>
         <a class="links__no-underline" href="{% unless action.link contains 'http://' or action.link contains 'https://' %}{{ page.baseurl }}{% endunless %}{{ action.link }}">
           <h4 class="typography__orange-h4 typography__sm-sup">{{ action.service }}</h4>
