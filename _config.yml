@@ -49,6 +49,9 @@ collections:
     output: false
   tabs:
     output: false
+  icons:
+    output: false
+    sort_by: 'order'
 defaults:
 - scope:
     path: ''
@@ -76,6 +79,7 @@ markdown: kramdown
 include:
   - "_accordions/"
   - "_tabs/"
+  - "_icons/"
 
 exclude:
   - "gulpfile.js"
