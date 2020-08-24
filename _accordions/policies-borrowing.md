@@ -6,7 +6,7 @@ order: 2
 
 Materials are available to current faculty, students and staff, residents of KCC District 520 (with a valid ID card) and affiliated borrowers. Patrons should never allow someone else to use their ID card. The owner of the ID card is responsible for all materials borrowed against it.
 
-### Check-out periods
+### Check-out Periods
 {: .typography__h3 }
 
 Most books can be checked out for four weeks to students, staff and non-students; and for 16 weeks to faculty, unless otherwise noted. Generally all materials other than books and CDs are for use in the library only. Materials should be returned to the circulation desk during library hours. 
