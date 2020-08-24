@@ -8,7 +8,7 @@ A current KCC photo ID card is required to check out books and other materials. 
 
 Photo IDs can be obtained in the Student Affairs - Registration area.
 
-### Card fees
+### Card Fees
 {: .typography__h3 }
 
 Any resident of the Kankakee Community College District 520 may obtain a library card at a cost of $5.00 with proof of residence and a state ID. Cards are valid for two years.
@@ -18,7 +18,7 @@ Any resident of the Kankakee Community College District 520 may obtain a library
 
 The Miner Memorial Library offers tours and library instruction that can be tailored to specific needs.
 
-### Community members
+### Community Members
 {: .typography__h3 }
 
 Tours are available for community groups or individuals not affiliated with KCC. Arrangements for all tours must be made a minimum of seven days in advance and are subject to staff availability. To arrange for a tour of the Miner Memorial Library, contact Tracy Conner at 815-802-8403 or tconner@kcc.edu.

@@ -7,9 +7,12 @@
 //
 // ===============================================================
 
+.hero-slider__slider--slide-heading {
+  text-shadow: 1px 2px 7px rgba(0,0,0,.75);
+}
 
 .hero-slider__slider--heading-container {   // div container for slide headings
-  width: 13%;
+  width: 8%;
 }
 
 //@media screen and (min-width: 488px) {

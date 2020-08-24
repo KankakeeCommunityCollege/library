@@ -8,7 +8,7 @@ KCC students, faculty and staff members with current, valid KCC ID cards are eli
 
 If an item is unavailable from KCC or from any of the I-Share libraries, current KCC students, faculty and staff may submit an interlibrary loan request. Please check [KCC's Primo Catalog](https://i-share-kcc.primo.exlibrisgroup.com/discovery/search?vid=01CARLI_KCC:CARLI_KCC){: target="_blank" rel="noopener noreferrer" } before placing requests.
 
-### Fees and restrictions
+### Fees and Restrictions
 {: .typography__h3 }
 
 Requests take 4 to 10 days to be filled, but may take longer for uncommon items. Patrons are limited to five item requests and five article requests at a time.  Every effort is made to obtain materials free of charge. If obtaining the item would incur a service fee (usually $10 to $20) please indicate in your request the amount you would be willing to pay. Any fees associated with lost and/or damaged books and overdue or replacement fines will be passed directly to the borrowing patron.
@@ -27,7 +27,7 @@ Patrons should first search KCC's [online databases](http://kcc.libguides.com/az
 
  <div class="mb-4" id="form_button_8d49f10dcb7f170c0936a1866e70010a"></div><script type="text/javascript" src="https://kcc.libwizard.com/embed_button.php?id=8d49f10dcb7f170c0936a1866e70010a&noheader=0&type=button&open-button-text=Request%20an%20Article&open-button-color=%23003768&text-color=%23ffffff" crossorigin="anonymous"></script>
 
-### Pick-up and return
+### Pick-up and Return
 {: .typography__h3 }
 
 Patrons will be notified by email or phone when the item has arrived. Materials are available for pick up at the circulation desk with a valid KCC ID card. Unclaimed books will be returned to the lending library two weeks after date of receipt. Unclaimed photocopies will be discarded after 30 days. 

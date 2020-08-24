@@ -56,7 +56,7 @@ These resources are available to improve your skills and improve your chances fo
 - [Science prof online](http://www.scienceprofonline.com/){: target="_blank" rel="noopener noreferrer" }
 - [WolframAlpha](http://www.wolframalpha.com/){: target="_blank" rel="noopener noreferrer" }
 
-### Test preparation
+### Test Preparation
 {: .typography__h3 .mb-1 }
 
 - [ACCUPLACER prep resources](http://kcc.edu/students/helpful/testingservices/tests/accuplacer/Pages/accuplacer-prep.aspx){: target="_blank" rel="noopener noreferrer" }

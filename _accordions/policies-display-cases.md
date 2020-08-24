@@ -32,12 +32,12 @@ If the theme of the display deals with a political, social or controversial issu
 
 The library technician will schedule and coordinate the display cases. The cases will be scheduled on a first come, first served basis. Reservations must be made one month in advance, and may be made up to one year in advance. Cases must be reserved for at least one week, preferably for one month.
 
-### Sizes and locations
+### Sizes and lLcations
 {: .typography__h3 }
 
 The library has four cube display cases in the atrium area, 29" by 29" x 18". 
 
-### Preparing a display
+### Preparing a Display
 {: .typography__h3 }
 
 Items may be dropped off at the library for the library staff to display. The individual or group may make arrangements to set up their own display by contacting the library technician. If the group or individual does not have its display materials to the library by the third day of its reservation, the space will be forfeited for other usage. Arrangements should be made to pick up materials within one week of the agree-upon end date of the exhibit. If not picked up within one week, items become property of the library and may be disposed of at the discretion of library staff.
@@ -51,7 +51,7 @@ Contents of the display cases are the sole responsibility of the exhibitor. We w
 
 Failure to adhere to the display case policy may result in denial of future privilege.
 
-### Request a display case
+### Request a Display Case
 {: .typography__h3 }
 
 To request a display case, contact Brandi Castillo at 815-802-8408 or bcastillo@kcc.edu. Include the name of the individual or organization, a description of the display, and a name, phone number and email of an individual to serve as the contact person for scheduling the length of the display, drop-off and pick-up of materials, and to answer any questions staff may have about the exhibit.​​
