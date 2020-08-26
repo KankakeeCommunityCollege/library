@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Tutoring'
 card_heading: 'Subjects'
-order: 3
+order: 4
 ---
 
 Tutoring is available for most core courses. We will make every effort to accommodate your needs but cannot guarantee we will be able to find a tutor for you. Additionally, you can receive help with course-related Canvas questions or questions about other common technology such as MS Office or MyLabs products. We also offer tips for time management, studying, and test-taking strategies.

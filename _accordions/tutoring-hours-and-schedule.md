@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Tutoring'
 card_heading: 'Hours and Schedule'
-order: 4
+order: 2
 ---
 
 ### Fall 2020 Schedule

@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Tutoring'
 card_heading: 'Online Tutoring'
-order: 2
+order: 3
 ---
 
 Online tutoring is available at [kcc.tutorocean.com](http://kcc.tutorocean.com){: target="_blank" rel="noopener noreferrer"} . Tutoring is available in most core subjects.  Online tutoring hours are from 9 a.m. to 8 p.m. M-Th, and 9 a.m. to 5 p.m. F.  See specific schedules in the Schedules area below.
