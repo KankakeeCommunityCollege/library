@@ -1,31 +1,3 @@
-function createStyleEl() {
-  const style = document.createElement('style');
-  const styleRules = `
-table {
-  border: none;
-}
-  `;
-  const css = document.createTextNode(styleRules);
-  
-  style.type = 'text/css';
-  style.appendChild(css);
-  return style;
-}
-
-function createDataTablesScript() {
-  const script = document.createElement('script');
-  
-  script.type = 'text/javascript';
-  const code = `
-  function go() {
-    return $('#Data').DataTable();
-  });
-  go();
-  `;
-  const scriptCode = document.createTextNode(code);
-  return script.appendChild(scriptCode);
-}
-
 function styleIframe() {
   if ( ! document.querySelector('.iframeTableStyling') )
     return;
@@ -36,14 +8,14 @@ function styleIframe() {
 
   console.log(iframe);
   iframe.addEventListener('load', ()=> {
-    console.log(iframe.contentDocument.body.querySelector('table.table'));
+    //console.log(iframe.contentDocument.body.querySelector('table.table'));
     const table = iframe.contentDocument.body.querySelector('table.table');
-    const script = createDataTablesScript();
+    const caption = table.querySelector('caption');
     
     table.classList.add('table', 'table-striped', 'responsive');
     table.id = 'Data';
+    caption.style = 'caption-side: top; font-size: 1.1rem;'
     const list = table.querySelectorAll('th');
-    console.log(list);
 
     for (let i = 0, len = list.length; i < len; i++ ) {
       const th = list[i];

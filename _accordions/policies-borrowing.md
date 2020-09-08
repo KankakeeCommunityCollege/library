@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Policies'
 card_heading: 'Borrowing'
-order: 2
+order: 1
 ---
 
 Materials are available to current faculty, students and staff, residents of KCC District 520 (with a valid ID card) and affiliated borrowers. Patrons should never allow someone else to use their ID card. The owner of the ID card is responsible for all materials borrowed against it.

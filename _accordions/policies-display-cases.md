@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Policies'
 card_heading: 'Display Cases'
-order: 3
+order: 7
 ---
 
 The Miner Memorial Library display cases are available to individuals or organizations to showcase non-commercial exhibits that are educational, cultural, civic, artistic or informative in nature and of general or specific interest. 
@@ -32,7 +32,7 @@ If the theme of the display deals with a political, social or controversial issu
 
 The library technician will schedule and coordinate the display cases. The cases will be scheduled on a first come, first served basis. Reservations must be made one month in advance, and may be made up to one year in advance. Cases must be reserved for at least one week, preferably for one month.
 
-### Sizes and lLcations
+### Sizes and Locations
 {: .typography__h3 }
 
 The library has four cube display cases in the atrium area, 29" by 29" x 18". 
@@ -40,7 +40,7 @@ The library has four cube display cases in the atrium area, 29" by 29" x 18".
 ### Preparing a Display
 {: .typography__h3 }
 
-Items may be dropped off at the library for the library staff to display. The individual or group may make arrangements to set up their own display by contacting the library technician. If the group or individual does not have its display materials to the library by the third day of its reservation, the space will be forfeited for other usage. Arrangements should be made to pick up materials within one week of the agree-upon end date of the exhibit. If not picked up within one week, items become property of the library and may be disposed of at the discretion of library staff.
+Items may be dropped off at the library for the library staff to display. The individual or group may make arrangements to set up their own display by contacting the library technician. If the group or individual does not have its display materials to the library by the third day of its reservation, the space will be forfeited for other usage. Arrangements should be made to pick up materials within one week of the agreed-upon end date of the exhibit. If not picked up within one week, items become property of the library and may be disposed of at the discretion of library staff.
 
 ### Cancellations
 {: .typography__h3 }

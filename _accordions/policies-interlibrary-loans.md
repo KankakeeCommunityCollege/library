@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Policies'
 card_heading: 'Interlibrary Loans'
-order: 5
+order: 3
 ---
 
 KCC students, faculty and staff members with current, valid KCC ID cards are eligible to borrow items from I-Share, a combined catalog of the items of over 80 academic libraries in the state of Illinois. The library user should search for the item in the [KCC Primo Catalog](https://i-share-kcc.primo.exlibrisgroup.com/discovery/search?vid=01CARLI_KCC:CARLI_KCC){: target="_blank" rel="noopener noreferrer" } and use the 'Request' option, which automatically routes the request to library staff.
@@ -18,7 +18,7 @@ Books are usually available for loan from other libraries. Certain types of mate
 ### Book Requests
 {: .typography__h3 }
 
-Patrons should first search [WorldCat](http://www.firstsearch.org/){: target="_blank" rel="noopener noreferrer" } (contact the library for the password) and look for an 'ILL' option to request the item. This will automatically route the request to library staff. If the option is unavailable, send an email to [tconner@kcc.edu](mailto:tconner@kcc.edu), including the exact book title and author; the year of publication and ISBN number; your first and last name; your KCC ID barcode number; and a telephone number or email address. Telephone requests are not accepted.
+Patrons should first search [WorldCat](http://www.firstsearch.org/){: target="_blank" rel="noopener noreferrer" } (contact the library for the password) and look for an 'ILL' option to request the item. This will automatically route the request to library staff. If the option is unavailable, send an email to [bcastillo@kcc.edu](mailto:bcastillo@kcc.edu), including the exact book title and author; the year of publication and ISBN number; your first and last name; your KCC ID barcode number; and a telephone number or email address. Telephone requests are not accepted.
 
 ### Article Requests
 {: .typography__h3 }

@@ -4,7 +4,7 @@ card_heading: 'Become a Tutor'
 order: 9
 ---
 
-The office of LearningTutoring Services is always looking for qualified tutor applicants. We hire only the most qualified individuals to become tutors. Our tutors care about and are committed to helping others learn. The majority of our tutor hiring is initiated through faculty referral. However, if you meet the minimum qualifications and have a passion for assisting others, please communicate your interest to Tracy Conner at [815-802-8403](tel:+18158028403) or [tconner@kcc.edu](mailto:tconner@kcc.edu).
+Tutoring Services is always looking for qualified tutor applicants. We hire only the most qualified individuals to become tutors. Our tutors care about and are committed to helping others learn. The majority of our tutor hiring is initiated through faculty referral. However, if you meet the minimum qualifications and have a passion for assisting others, please communicate your interest to Tracy Conner at [815-802-8403](tel:+18158028403) or [tconner@kcc.edu](mailto:tconner@kcc.edu).
 
 ### Minimum Qualifications
 {: .typography__h3 }

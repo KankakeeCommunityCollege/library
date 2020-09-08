@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Policies'
 card_heading: 'Acquisitions'
-order: 1
+order: 5
 ---
 
 The acquisition of materials for the Harold & Jean Miner Memorial Library is a responsibility shared between the faculty and the library staff. Faculty members are responsible for insuring that pertinent materials are acquired for students. Library staff is responsible for insuring that the library collection is well balanced, relevant to the curriculum, and up-to-date in usefulness for students' and faculty members' needs.
@@ -16,15 +16,15 @@ Suggestions for new materials may be submitted at any time. Bibliographies, publ
 ### Areas of Instruction
 {: .typography__h3 }
 
-Once every five years, prior to program review, the library staff members focus on an area of instruction.  Annually, faculty members in twelve areas of instruction are contacted to assist in reviewing unused, worn or dated material. Those same members are then asked to select new materials based on their suggestions and lists of positively reviewed materials. Materials lists are derived from current syllabi for courses and research assignments in courses.
+ Once every five years, prior to program review, the library staff members focus on each area of instruction. Annually, faculty members in twelve areas of instruction are contacted to assist in reviewing unused, worn or dated material and in selecting new materials.  Current syllabi and research assignments in courses are also used in the materials selection process.
 
 ### Periodicals
 {: .typography__h3 }
 
 Suggestions for additions and deletions to the periodical collection are requested of faculty each spring. Copies of the library list of periodicals may be searched through the KCC Primo Catalog.
 
-## Non-Print Materials
-{: .typography__h2 }
+### Non-Print Materials
+{: .typography__h3 }
 
 Non-print materials, in particular DVD/video cassette recordings, must first be requested for preview. Timelines and procedures are detailed on the form. 
 

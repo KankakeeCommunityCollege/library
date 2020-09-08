@@ -20,3 +20,25 @@
     margin-right: unset;
   }
 }
+
+.iframe__wrapper--hours {
+  height: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-bottom: 500px;
+  padding-top: 25px;
+  position: relative;
+  & iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .iframe__wrapper--hours {
+    padding-bottom: 400px;
+  }
+}
