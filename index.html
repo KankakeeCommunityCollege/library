@@ -19,43 +19,25 @@ slides:
     text: 'The **POWER** of Learning'
   - image: uploads/D51_3799.jpg
     alt-text: Photo of the newly renovated computer lab in KCC's Library
-    url: 'https://vufind.carli.illinois.edu/vf-kcc/'
-    text: "Find **Resources**"
-  - image: uploads/lab.jpg
-    alt-text: "Photo of the newly renovated library at KCC"
-    url: 'https://kcc.libguides.com/az.php'
-    text: Find **Articles**
+    url: '#'
+    text: 'The **POWER** of Success'
 page_actions:
-  - link: 'https://vufind.carli.illinois.edu/vf-kcc/'
-    label: "Link to ..."
-    icon_src: 'uploads/searchable-database-icon_bolder.svg'
-    icon_alt: 'Icon of a database with a search icon over it'
+  - link: 'https://kcc.libguides.com/search'
+    label: "Link to the KCC Library 'Research Material' page"
     service: Research
     description: 'Books, articles, streaming video and other materials available through the library.'
     button_text: 'Get Started'
   - link: 'tutoring/'
-    label: 'Link to ...'
-    icon_src: 'uploads/article-icon.svg'
-    icon_alt: 'Icon of an article with a search icon over it'
+    label: 'Link to the KCC Library tutoring page'
     service: Tutoring
     description: 'Tutoring schedules, online tutoring information, and FAQs about the tutoring process.'
     button_text: 'Learn More'
-  - link: '#'
+  - link: 'https://kankakee.libcal.com/'
     label: 'Reserve Space'
-    icon_src: 'uploads/search-subjects-cutout.svg'
-    icon_alt: 'Icon of lines of text with a seatch glass-icon over them'
     service: 'Reserve Space'
     description: 'Reserve a computer, study room, a seat in tutoring, or a seat in the library.'
     button_text: 'Learn More'
 ---
-
-
-
-
-
-
-
-<!-- Build -->
 
 <main>
   <div class="container background__color--tan">
@@ -66,11 +48,10 @@ page_actions:
       </div>
       {% assign icon = site.icons %}
       {% for action in page.page_actions %}
-      {% comment %}{% assign index = forloop.index0 %}{% endcomment %}
+      {% assign index = forloop.index0 %}
       <div class="content__min-height col-md-6 col-lg-4 mb-5 text-center d-flex flex-column align-items-center justify-content-center">
-        <a href="{% unless action.link contains 'http://' or action.link contains 'https://' %}{{ page.baseurl }}{% endunless %}{{ action.link }}" aria-label="{{ action.label }}">
-          {% comment %}{{ icon[index] }}{% endcomment %}
-          <img src="assets/img/kcc-placeholder.png" data-src="assets/img/kcc-placeholder-square.png" class="img-fluid w-50 rounded-circle mb-3" alt="">
+        <a href="{% unless action.link contains 'http://' or action.link contains 'https://' %}{{ page.baseurl }}{% endunless %}{{ action.link }}" title="{{ action.label }}">
+          {{ icon[index] }}
         </a>
         <a class="links__no-underline" href="{% unless action.link contains 'http://' or action.link contains 'https://' %}{{ page.baseurl }}{% endunless %}{{ action.link }}">
           <h4 class="typography__orange-h4 typography__sm-sup">{{ action.service }}</h4>
@@ -84,14 +65,18 @@ page_actions:
   <div class="container">
     <div class="row mb-3">
       <div class="col margins__col--top home__col--heading-underline">
-        <h3 class="typography__section--heading mb-4">Location & Hours</h3>
+        <h3 class="typography__section--heading mb-4">Hours</h3>
       </div>
     </div>
     <div class="row">
       <div class="col mt-3">
-       <div class="iframe__wrapper--hours">
-         <iframe id="hoursWidget" src="{{ page.baseurl }}hours-widget/" frameborder="0"></iframe>
-       </div>
+        <div class="editable">
+          <p><strong>While the library space is open on a reduced schedule, <em>many services and items are available even when we're&nbsp;closed!</em></strong></p>
+          <p><strong>You can view <a href="https://kcc.libanswers.com/library/faq/305651">Current Library Services</a> for more information.</strong></p>
+        </div>
+        <div class="iframe__wrapper--hours">
+          <iframe id="hoursWidget" src="{{ page.baseurl }}hours-widget/" frameborder="0"></iframe>
+        </div>
       </div>
     </div>
   </div>

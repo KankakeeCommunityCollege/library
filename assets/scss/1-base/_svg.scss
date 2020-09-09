@@ -1,0 +1,156 @@
+.svg {
+  height: 200px;
+  max-width: 100%;
+  width: 200px;
+  &--fill-none {
+    fill: none;
+  }
+  &--fill-blue {
+    fill: $primary-blue;
+  }
+}
+
+.svg__research {
+  transition: all ease-in-out;
+}
+
+#svgHour,
+#svgMinute {
+  transform-origin: 146.834px 143.891px;
+}
+
+#svgGlass {
+  transform-origin: center center;
+}
+
+#svgLine1,
+#svgLine2,
+#svgCheck {
+  opacity: 0;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359.5deg);
+  }
+}
+
+@keyframes spin-slight {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.085);
+  }
+}
+
+a:hover .svg__research #svgGlass {
+  animation-name: zoom;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+a:hover .svg__tutoring #svgLine1 {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  //animation-iteration-count: 2;
+  //animation-direction: alternate;
+}
+
+a:hover .svg__tutoring #svgLine2 {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-delay: .5s;
+  animation-timing-function: ease-in-out;
+  //animation-iteration-count: 2;
+  //animation-direction: alternate;
+}
+
+a:hover .svg__reserve #svgSquare {
+  animation-name: fade-out;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+a:hover .svg__reserve #svgCheck {
+  animation-name: fade-in;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+a:hover .svg__reserve #svgMinute {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+a:hover .svg__reserve #svgHour {
+  animation-name: spin-slight;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
