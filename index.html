@@ -49,7 +49,7 @@ page_actions:
       {% assign icon = site.icons %}
       {% for action in page.page_actions %}
       {% assign index = forloop.index0 %}
-      <div class="content__min-height col-md-6 col-lg-4 mb-5 text-center d-flex flex-column align-items-center justify-content-center">
+      <div class="content__min-height col-md-4 mb-5 text-center d-flex flex-column align-items-center justify-content-center">
         <a href="{% unless action.link contains 'http://' or action.link contains 'https://' %}{{ page.baseurl }}{% endunless %}{{ action.link }}" title="{{ action.label }}">
           {{ icon[index] }}
         </a>
@@ -63,6 +63,19 @@ page_actions:
     </div>
   </div>
   <div class="container">
+    <div class="row">
+      <div class="col position__relative-down home__col--heading-underline">
+        <h3 class="typography__section--heading mb-4">Get Help</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-5">
+        <a href="https://kcc.libguides.com/canvas" class="links__no-underline banner__wrapper">
+          <img src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}uploads/library-help-banner-2.jpg" alt="Research and library help" class="img__full-width">
+          <button role="link" href="https://kcc.libguides.com/canvas" class="btn btn-primary banner__button">Get Help</button>
+        </a>
+      </div>
+    </div>
     <div class="row mb-3">
       <div class="col margins__col--top home__col--heading-underline">
         <h3 class="typography__section--heading mb-4">Hours</h3>
