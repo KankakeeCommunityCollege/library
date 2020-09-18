@@ -68,7 +68,7 @@ function cmsScss() {
 
   return gulp.src(config.cmsScss.src)
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass(config.cmsScss.outputStyle).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulpif(PRODUCTION, cssnano({ zindex: false }))) // {zindex:false} to prevent override of z-index values -- higher z-index's needed to bring objects above bootstrap's default z-index values
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))

@@ -37,6 +37,7 @@ sass:
 
 # Gulp task to create stylesheet for custom options in CloudCannon (CMS customizations). Editors can use these styles as option in the CMS.
 cmsScss:
+  outputStyle: {outputStyle: 'expanded'}
   dest:
     jekyllRoot: "assets/css/"
     buildDir: "_site/assets/css/"
