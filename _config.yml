@@ -54,9 +54,6 @@ collections:
   icons:
     output: false
     sort_by: 'order'
-    _unlisted: true
-  data:
-    _unlisted: true
 defaults:
 - scope:
     path: ''
