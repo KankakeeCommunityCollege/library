@@ -163,3 +163,23 @@ _options: # The CloudCannon options key
     undo: true
     redo: true
     styles: /assets/css/content.css
+  _text:
+    bold: true
+    italic: true
+    removeformat: true
+    link: true
+    undo: true
+    redo: true
+    underline: true
+    strike: true
+    subscript: true
+    superscript: true
+_explore:
+  groups:
+    - heading: 'Standalone | File Browser'
+      collections:
+        - pages
+    - heading: 'Collections | Data'
+      collections:
+        - contacts
+        - accordions
