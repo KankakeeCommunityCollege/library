@@ -1,3 +1,82 @@
+h1.typography__h2,
+h2.typography__h2,
+h3.typography__h2,
+h4.typography__h2,
+h5.typography__h2,
+h6.typography__h2  {
+  color: $color-grey-heading;
+  font-family: $font-family-headings;
+  font-size: 2rem;
+  font-weight: $font-weight-boldish;
+}
+
+h1.typography__h3,
+h2.typography__h3,
+h3.typography__h3,
+h4.typography__h3,
+h5.typography__h3,
+h6.typography__h3 {
+  color: $primary-blue;
+  font-family: $font-family-headings;
+  font-size: 1.75rem;
+  font-weight: $font-weight-bolder;
+}
+
+h1.typography__h4,
+h2.typography__h4,
+h3.typography__h4,
+h4.typography__h4,
+h5.typography__h4,
+h6.typography__h4 {
+  color: $primary-red;
+  font-family: $font-family-headings;
+  font-size: 1.7rem;
+  font-weight: $font-weight-bolder;
+}
+
+h1.typography__h5,
+h2.typography__h5,
+h3.typography__h5,
+h4.typography__h5,
+h5.typography__h5,
+h6.typography__h5 {
+  color: $color-grey-heading;
+  font-family: $font-family-headings;
+  font-weight: $font-weight-bold;
+  font-size: 1.5rem;
+}
+
+h1.typography__h6,
+h2.typography__h6,
+h3.typography__h6,
+h4.typography__h6,
+h5.typography__h6,
+h6.typography__h6 {
+  color: $color-grey-heading;
+  font-family: $font-family-headings;
+  font-weight: $font-weight-bold;
+  font-size: 1.4rem;
+}
+
+h1.typography__h7,
+h2.typography__h7,
+h3.typography__h7,
+h4.typography__h7,
+h5.typography__h7,
+h6.typography__h7 { // Inventing an additional <h7> b/c I would have to shift all the style names to create an <h1> and have 6 heading styles available
+  color: $color-grey-heading;
+  font-family: $font-family-headings;
+  font-weight: $font-weight-bold;
+  font-size: 1.4rem;
+}
+
+.typography__h5--description {
+  color: $grey-6;
+  font-family: $font-family-oswald;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
 img.float-image-left {
   max-width: 100%;
   height: auto;

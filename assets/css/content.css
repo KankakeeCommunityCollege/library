@@ -3,6 +3,85 @@ body {
   overflow-x: hidden;
 }
 
+h1.typography__h2,
+h2.typography__h2,
+h3.typography__h2,
+h4.typography__h2,
+h5.typography__h2,
+h6.typography__h2 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h1.typography__h3,
+h2.typography__h3,
+h3.typography__h3,
+h4.typography__h3,
+h5.typography__h3,
+h6.typography__h3 {
+  color: #0f3b63;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h1.typography__h4,
+h2.typography__h4,
+h3.typography__h4,
+h4.typography__h4,
+h5.typography__h4,
+h6.typography__h4 {
+  color: #c61f48;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+h1.typography__h5,
+h2.typography__h5,
+h3.typography__h5,
+h4.typography__h5,
+h5.typography__h5,
+h6.typography__h5 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h1.typography__h6,
+h2.typography__h6,
+h3.typography__h6,
+h4.typography__h6,
+h5.typography__h6,
+h6.typography__h6 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+h1.typography__h7,
+h2.typography__h7,
+h3.typography__h7,
+h4.typography__h7,
+h5.typography__h7,
+h6.typography__h7 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.typography__h5--description {
+  color: #58585b;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
 img.float-image-left {
   max-width: 100%;
   height: auto;

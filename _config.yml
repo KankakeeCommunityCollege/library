@@ -143,7 +143,7 @@ _options: # The CloudCannon options key
     redo: true
     styles: /assets/css/content.css
   _block:
-    format: p h2 h3 h4 h5 h6 pre address div
+    format: p h2 h3 h4 h5 h6 pre address
     bold: true
     italic: true
     underline: true
