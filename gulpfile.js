@@ -65,7 +65,6 @@ function mainScss() {
 // compile 'content.css' which creates custom styles that are available to users the CloudCannon interface.
 function cmsScss() {
   return gulp.src(config.cmsScss.src)
-    .pipe(sourcemaps.init())
     .pipe(sass(config.cmsScss.outputStyle).on('error', sass.logError))
     .pipe(gulp.dest(config.cmsScss.dest.jekyllRoot))
     .pipe(gulp.dest(config.cmsScss.dest.buildDir))
