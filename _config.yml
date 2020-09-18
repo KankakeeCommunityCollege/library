@@ -54,6 +54,9 @@ collections:
   icons:
     output: false
     sort_by: 'order'
+    _unlisted: true
+  data:
+    _unlisted: true
 defaults:
 - scope:
     path: ''
@@ -101,6 +104,7 @@ exclude:
   - "page-startups"
   - "UPDATE_PROCEDURE.md"
   - "ruby-version.txt"
+  - "page-startups/"
 
 uploads_dir: # specifies the default uploads directory for CloudCannon
   - "uploads/"
@@ -120,3 +124,26 @@ _options: # The CloudCannon options key
     hidden: true
   translate:
     hidden: true # Prevent CloudCannon Users from randomly turning translate on in their site.
+  sheet_key:
+    hidden: true
+  content:
+    format: p h2 h3 h4 h5 h6 pre address div
+    bold: true
+    italic: true
+    underline: true
+    subscript: true
+    superscript: true
+    indent: true
+    outdent: true
+    image: true
+    table: true
+    left: align-left
+    center: center-this-text
+    right: align-right
+    removeformat: true
+    link: true
+    numberedlist: true
+    bulletedlist: true
+    undo: true
+    redo: true
+    styles: /assets/css/content.css ## Custom stylesheet for use in CloudCannon (must be uncompressed CSS)
