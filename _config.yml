@@ -4,7 +4,7 @@ public-url: "https://library.kcc.edu" ## This gets generated into the link that 
 url: 'https://library.kcc.edu' ## NO TRAILING SLASHES!!/<--nope
 timezone: America/Chicago
 theme: "kcc-gem-theme"
-google-tag_key: Google Tag Manager key goes here
+google-tag_key: GTM-N73VC4W
 #core_site: true
 #translate: true ## Uncomment to activate Google Translate Powers!!
 nav_links:
