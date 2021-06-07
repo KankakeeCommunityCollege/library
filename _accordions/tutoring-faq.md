@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Tutoring'
 card_heading: 'FAQs'
-order: 7
+order: 6
 ---
 
 **What are the benefits of tutoring?**

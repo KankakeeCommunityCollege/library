@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Tutoring'
 card_heading: 'Tutoring Staff'
-order: 5
+order: 4
 ---
 
 The KCC tutoring staff consists of current and former KCC students, community professionals and adjunct faculty members. Each tutor is required to complete CRLA Regular/Level 1 Training by the end of the semester in which he/she is hired. Tutors are highly proficient and in some cases have mastered the subject area they tutor. 

@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Tutoring'
 card_heading: 'Preparing for a Tutoring Session'
-order: 6
+order: 5
 ---
 
 Please take the following steps to maximize the benefits of tutoring:
