@@ -1,7 +1,7 @@
 ---
 accordion_page: 'Tutoring'
 card_heading: 'Online Resources'
-order: 8
+order: 7
 ---
 
 These resources are available to improve your skills and improve your chances for success at KCC. 
