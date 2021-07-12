@@ -3,6 +3,7 @@ site_name: "Library"
 public-url: "https://library.kcc.edu" ## This gets generated into the link that displays in the footer (the one above the social icons)
 url: 'https://library.kcc.edu' ## NO TRAILING SLASHES!!/<--nope
 timezone: America/Chicago
+port: 3000
 theme: "kcc-gem-theme"
 google-tag_key: GTM-N73VC4W
 #core_site: true
@@ -83,8 +84,6 @@ include:
   - "_icons/"
 
 exclude:
-  - "gulpfile.js"
-  - "gulp-tasks/"
   - "node_modules"
   - "npm-debug.log"
   - "package.json"
@@ -92,16 +91,11 @@ exclude:
   - "README.md"
   - "Gemfile"
   - "Gemfile.lock"
-  - "gulpconfig.yml"
   - "webpack.config.js"
-  - "install.sh"
-  - "install_template.sh"
-  - "WEBPACK-BABEL-COREJS_INFO.md"
   - "siteicon.png"
   - "page-startups"
-  - "UPDATE_PROCEDURE.md"
-  - "ruby-version.txt"
-  - "page-startups/"
+  - "buildtools/"
+  - "postcss.config.js"
 
 uploads_dir: # specifies the default uploads directory for CloudCannon
   - "uploads/"

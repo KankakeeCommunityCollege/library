@@ -1,3 +1,4 @@
+import '../../scss/main.scss';
 import setIframeHeight from './setIframeHeight.js';
 import styleIframe from './styleIframe.js';
 import styleHours from './styleHours.js';
