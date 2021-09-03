@@ -73,8 +73,12 @@
   height: 100%;
 }
 
-.position__relative-down {
+.position__relative-wrapper {
   position: relative;
+}
+
+.position__absolute-down {
+  position: absolute;
   bottom: -57px;
   z-index: 999;
 }
