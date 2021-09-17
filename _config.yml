@@ -27,9 +27,12 @@ nav_links:
     button: false
     external: false
   - link_text: Get Help
-    link_href: 'https://kcc.libguides.com/canvas'
-    external: true
     button: true
+    dropdown:
+      - text: Subject Guides
+        href: 'https://kcc.libguides.com/canvas'
+      - text: Tutoring Help
+        href: 'http://kcc.libguides.com/tutoringhelp'
 #  - link_text: Example External Link
 #    link_href: 'https://example-external-link.com'
 #    button: false
