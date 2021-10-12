@@ -29,7 +29,7 @@ nav_links:
   - link_text: Get Help
     button: true
     dropdown:
-      - text: Subject Guides
+      - text: Library Help
         href: 'https://kcc.libguides.com/canvas'
       - text: Tutoring Help
         href: 'http://kcc.libguides.com/tutoringhelp'
