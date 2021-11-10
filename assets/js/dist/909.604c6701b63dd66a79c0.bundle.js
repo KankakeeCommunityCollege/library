@@ -1,0 +1,1 @@
+(self.webpackChunkkcc_library=self.webpackChunkkcc_library||[]).push([[909],{6909:function(){document.addEventListener("DOMContentLoaded",(function(){var e;e=(new Date).getFullYear(),document.getElementById("currentYear").innerHTML=e}))}}]);
