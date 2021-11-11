@@ -1,0 +1,19 @@
+<div id="LoadingEvents">
+            {% for i in (1..3) %}{%- comment %}Why write all 3 identical slides when you don't need to?{% endcomment -%}
+            <div>
+              <div class="events mx-0 row">
+                <div class="events__left events__left--loading col-2 px-0 py-4 text-center">
+                </div>
+                <div class="events__right pt-1 col-10">
+                  <div class="events__info-wrapper d-flex flex-column justify-content-center">
+                    <p class="events__loading-p">Loading Events...</p>
+                    <img
+                    src="{{ page.baseurl }}assets/img/loader.min.svg"
+                    class="img-fluid loader--small loader--animate mx-auto"
+                    alt="Loading...">
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>

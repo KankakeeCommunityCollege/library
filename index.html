@@ -71,7 +71,9 @@ page_actions:
     </div>
     <div class="row">
       <div class="col mt-3">
-        <div id="Events"></div>
+        <div id="Events">
+          {% include loading-slider.html %}
+        </div>
       </div>
     </div>
     <div class="row mb-3">
@@ -80,10 +82,9 @@ page_actions:
       </div>
     </div>
     <div class="row">
-      <div class="col mt-3">
+      <div class="col">
         <div class="editable">
-          <p><strong>While the library space is open on a reduced schedule, <em>many services and items are available even when we're&nbsp;closed!</em></strong></p>
-          <p><strong>You can view <a href="https://kcc.libanswers.com/library/faq/305651">Current Library Services</a> for more information.</strong></p>
+          <p class="mb-0">&nbsp;</p>
         </div>
         <div class="iframe__wrapper--hours">
           <iframe id="hoursWidget" src="{{ page.baseurl }}hours-widget/" frameborder="0"></iframe>
