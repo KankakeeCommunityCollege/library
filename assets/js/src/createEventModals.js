@@ -86,7 +86,7 @@ function loopOverEvents(data, html) {
 function createEventModals(response) {
   const values = response.result.values;
 
-  // We don't need any modals if there are no upcoming events
+  // We don't need any modals if there are no upcoming events (length will always be at least 1 b/c the first row is not data)
   if (values.length == 1)
     return;
 

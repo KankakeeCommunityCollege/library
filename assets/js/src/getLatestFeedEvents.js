@@ -1,5 +1,5 @@
 const SHEET_ID = '1MTAbNLbdd112LiyhmMLhocx_najdvePMxoRzIvMh8Uo';
-const SHEET_RANGE = 'Sheet1';
+const SHEET_RANGE = 'EVENTS';
 const API_PARAMS = { // This is configuration for API call with spreadsheets that are setup as readonly
   'apiKey': 'AIzaSyCEBsbXfFcdbkASlg-PodD1rT_Fe3Nw62A',
   'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/sheets/v4/rest']

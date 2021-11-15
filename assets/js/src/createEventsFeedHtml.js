@@ -22,7 +22,7 @@ function noEventsHandler(html) {
 function loopOverEvents(data, html) {
   data.forEach(event => {
     // Destructuring-assignment of each item used from in the feed.
-    let [ title,link,,,,eventId,date,,,descShort,,location,,,,,, ] = event; 
+    let [ title,,,,,eventId,date,,,descShort,,location,,,,,, ] = event;
     const d = new Date(date);
 
     return html += `
