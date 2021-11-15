@@ -14,10 +14,10 @@
  * ]
  *
  * The modals contain more information for each event and the link to the event in LibCal
- * Modals are opened by clicking on an event in the events-slider
+ * Modals are opened by clicking on an event in the events-slider/carousel
  * 
  */
-const PARENT = document.getElementById('eventsModals');
+const PARENT = document.getElementById('eventsModals'); // Built into library homepage's HTML
 
 function formatDescriptionText(string) {
   const strongInfo = string.replace(/^\*([^\*]+:)\*(.+)$/gm, `<strong>$1</strong>$2`);
@@ -27,27 +27,18 @@ function formatDescriptionText(string) {
 
 function loopOverEvents(data, html) {
   data.forEach(event => {
-    let [
+    let [ // These variables correspond to each column from the events in the Google Sheet
       title,
       link,
       descriptionLong,
-      category,
-      guid,
-      eventId,
-      date,
-      start,
-      end,
-      descriptionShort,
-      campus,
-      location,
-      presenter,
+      category,,
+      eventId,,,,,,,,
       registrationRequired,
       seats,
-      attending,
-      waitlist,
-      audience
+      attending,,
     ] = event;
 
+    // Bootstrap 4 markup for a modal
     return html += `
 <div class="modal fade" id="eventId${eventId}" tabindex="-1" aria-labelledby="eventTitle${eventId}" aria-hidden="true">
   <div class="modal-dialog modal-lg">

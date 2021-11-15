@@ -1,4 +1,4 @@
-const PARENT = document.getElementById('Events');
+const PARENT = document.getElementById('EventsSlider');
 const monthNames = [
   'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
 ];

@@ -8,7 +8,7 @@ const SHEET_PARAMS = {
   spreadsheetId: SHEET_ID,
   range: SHEET_RANGE
 };
-const PARENT = document.getElementById('Events');
+const PARENT = document.getElementById('EventsSlider');
 const errorMessage = `
 <div>
     <div class="events mx-0 row">
