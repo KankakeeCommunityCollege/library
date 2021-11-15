@@ -154,3 +154,9 @@ a:hover .svg__reserve #svgHour {
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
 }
+
+.svg__new-tab {
+  fill: $white;
+  margin-left: .25rem;
+  vertical-align: text-bottom;
+}

@@ -27,11 +27,11 @@ function loopOverEvents(data, html) {
 
     return html += `
 <div>
-  <a href="${link}" class="events__link" target="_blank" rel="noopener noreferrer">
+  <a href="#eventId${eventId}" role="button" data-toggle="modal" class="events__link">
     <div class="events mx-0 row">
       <div class="events__left col-2 px-0 py-4 text-center">
         <span class="events__month">${monthNames[d.getMonth()]}</span>
-        <pan class="events__date">${d.getDate()}</span>
+        <pan class="events__date">${d.getDate() + 1}</span>
       </div>
       <div class="events__right events__info-wrapper pt-1 col-10">
         <span class="events__title">${title}</span>
@@ -52,6 +52,7 @@ function createEventsFeedHtml(response) {
 
   data.length === 0 ? html = noEventsHandler(html) : html = loopOverEvents(data, html);
   PARENT.innerHTML = html;
+  import('./createEventModals').then(({default: createEventModals}) => createEventModals(response))
 }
 
 export default createEventsFeedHtml;

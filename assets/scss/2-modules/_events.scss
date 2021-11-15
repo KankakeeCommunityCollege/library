@@ -78,6 +78,10 @@ $font-color-black: #000;
     position: absolute;
     top: .25rem;
   }
+  &--relative-up {
+    position: relative;
+    top: -.5rem;;
+  }
 }
 
 .events__link:hover .events__title {
