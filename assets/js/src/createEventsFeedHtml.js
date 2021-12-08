@@ -45,12 +45,19 @@ function loopOverEvents(data, html) {
   return html;
 }
 
+/**
+ *
+ * @const {boolean} NO_EVENTS - Tests if the Google Sheet has any events.
+ *                              Returns `true` if there are no events, `false` if there are.
+ *
+ */
 function createEventsFeedHtml(response) {
   const values = response.result.values;
   const data = values.slice(1, values.length);
+  const NO_EVENTS = (values[1][0] == '#N/A' || data.length == 0); // If first cell of the second row contains "#N/A" or the length is 0 there are no events
   let html = '';
 
-  data.length === 0 ? html = noEventsHandler(html) : html = loopOverEvents(data, html);
+  NO_EVENTS ? html = noEventsHandler(html) : html = loopOverEvents(data, html);
   PARENT.innerHTML = html;
   import('./createEventModals').then(({default: createEventModals}) => createEventModals(response))
 }
