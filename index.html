@@ -73,11 +73,30 @@ page_actions:
   <div class="container">
     <div class="row mb-3">
       <div class="col margins__col--top home__col--heading-underline">
-        <h3 class="typography__section--heading mb-4">Hours</h3>
+        <h3 id="events" class="typography__section--heading links__offset mb-4">Events</h3>
       </div>
     </div>
     <div class="row">
       <div class="col mt-3">
+        <div id="EventsSlider">
+          <!-- Events feed is built here via JS -->
+          {% include loading-slider.html %}
+        </div>
+        <div id="eventsModals">
+          <!-- Events feed modals are built here via JS -->
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col margins__col--top home__col--heading-underline">
+        <h3 class="typography__section--heading mb-4">Hours</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="editable">
+          <p class="mb-0">&nbsp;</p>
+        </div>
         <div class="iframe__wrapper--hours">
           <iframe id="hoursWidget" src="{{ page.baseurl }}hours-widget/" frameborder="0"></iframe>
         </div>
