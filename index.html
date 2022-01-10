@@ -76,17 +76,23 @@ page_actions:
         <h3 id="events" class="typography__section--heading links__offset mb-4">Events</h3>
       </div>
     </div>
+  </div>
+  <div class="container px-lg-0">
     <div class="row">
-      <div class="col mt-3">
+      <div class="col-12 events__wrapper mt-3">
         <div id="EventsSlider">
           <!-- Events feed is built here via JS -->
           {% include loading-slider.html %}
         </div>
+      </div>
+      <div class="col-12">
         <div id="eventsModals">
           <!-- Events feed modals are built here via JS -->
         </div>
       </div>
     </div>
+  </div>
+  <div class="container">
     <div class="row mb-3">
       <div class="col margins__col--top home__col--heading-underline">
         <h3 class="typography__section--heading mb-4">Hours</h3>
