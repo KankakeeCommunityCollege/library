@@ -95,7 +95,7 @@ function createEventModals(response) {
   let html = '';
 
   html = loopOverEvents(data, html);
-  PARENT.innerHTML = html;
+  return PARENT.innerHTML = html;
 }
 
 export default createEventModals;

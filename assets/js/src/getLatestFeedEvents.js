@@ -1,14 +1,15 @@
-const SHEET_ID = '1MTAbNLbdd112LiyhmMLhocx_najdvePMxoRzIvMh8Uo';
-const SHEET_RANGE = 'EVENTS';
-const API_PARAMS = { // This is configuration for API call with spreadsheets that are setup as readonly
+const SHEET_ID = '1MTAbNLbdd112LiyhmMLhocx_najdvePMxoRzIvMh8Uo'; // ID of the spreadsheet
+const SHEET_RANGE = 'EVENTS'; // Which range we want, in this case its set to the entire contents of the `EVENTS` tab spreadsheet
+const API_PARAMS = { // This is configuration for Sheets API call with spreadsheets that are setup as READONLY
   'apiKey': 'AIzaSyCEBsbXfFcdbkASlg-PodD1rT_Fe3Nw62A',
   'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/sheets/v4/rest']
 };
-const SHEET_PARAMS = {
+const SHEET_PARAMS = { // Construct the necessary parameters object for using the `spreadhseets.values.get()` method
   spreadsheetId: SHEET_ID,
   range: SHEET_RANGE
 };
-const PARENT = document.getElementById('EventsSlider');
+const PARENT = document.getElementById('EventsSlider'); // Element built into the pages' HTML markup
+// Error message for potential issues when fetching the events using the gapi
 const errorMessage = `
 <div>
     <div class="events mx-0 row">
@@ -30,28 +31,36 @@ const errorMessage = `
       </div>
     </div>
 </div><div></div>`;
-
-function getLatestFeedEvents(SLICK_PARAMS) {
-  gapi.load('client', () => {
-    gapi.client.init(API_PARAMS).then(() => {
+/**
+ * 
+ * @param {function} res - A `resolve()` callback passed from a Promise in `./all.js`. The Promise needs to resolve after the events feed is build
+ * @param {function} rej - A `reject()` callback from the same Promise
+ * @param {object} SLICK_PARAMS - A parameters object defined in `all.js` for initializing slick
+ * @returns returns a resolved Promise so that asynchronous code can be run after the feed is built.
+ */
+function getLatestFeedEvents(res, rej, SLICK_PARAMS) {
+  return gapi.load('client', () => {
+    return gapi.client.init(API_PARAMS).then(() => {
       return gapi.client.sheets.spreadsheets.values.get(SHEET_PARAMS);
     }).then(response => {
-      import('./createEventsFeedHtml').then(({ default: createEventsFeedHtml }) => {
-        createEventsFeedHtml(response)
-      }).then(() => {
-        $(PARENT).slick(SLICK_PARAMS)
-      })
+      return import('./createEventsFeedHtml').then(({ default: createEventsFeedHtml }) => {
+        return createEventsFeedHtml(response);
+      });
+    }).then(() => {
+      return res();
     }, err => {
       console.error('Execute error:', err);
+      // In case of error
       Promise.resolve()
-        .then(() => PARENT.innerHTML = errorMessage)
-        .then(() => $(PARENT).slick(SLICK_PARAMS))
+        .then(() => PARENT.innerHTML = errorMessage) // Inject the error message
+        .then(() => $(PARENT).slick(SLICK_PARAMS)) // Initialize slick with same parameters as if it were successful
         .then(() => {
           const reloadBtn = document.getElementById('eventsReload');
-
+          
           reloadBtn.addEventListener('click', () => window.location.reload());
         })
-    })
+      return rej();
+    });
   });
 }
 

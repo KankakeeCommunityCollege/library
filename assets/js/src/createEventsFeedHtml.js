@@ -26,20 +26,20 @@ function loopOverEvents(data, html) {
     const d = new Date(date);
 
     return html += `
-<div>
-  <a href="#eventId${eventId}" role="button" data-toggle="modal" class="events__link">
-    <div class="events mx-0 row">
+<div class="eventsSlide">
+    <div class="events row">
       <div class="events__left col-2 px-0 py-4 text-center">
         <span class="events__month">${monthNames[d.getMonth()]}</span>
         <pan class="events__date">${d.getDate() + 1}</span>
       </div>
       <div class="events__right events__info-wrapper pt-1 col-10">
-        <span class="events__title">${title}</span>
-        <span class="events__description mt-2">${descShort}</span>
-        <span class="events__location mt-2">${location}</span>
+        <a href="#eventId${eventId}" role="button" data-toggle="modal" class="events__link">
+          <span class="events__title">${title}</span>
+          <span class="events__description mt-2">${descShort}</span>
+          <span class="events__location mt-2">${location}</span>
+        </a>
       </div>
     </div>
-  </a>
 </div>`;
   });
   return html;
@@ -59,7 +59,12 @@ function createEventsFeedHtml(response) {
 
   NO_EVENTS ? html = noEventsHandler(html) : html = loopOverEvents(data, html);
   PARENT.innerHTML = html;
-  import('./createEventModals').then(({default: createEventModals}) => createEventModals(response))
+  if (!NO_EVENTS) {
+    return import('./createEventModals').then(({ default: createEventModals }) => {
+      return createEventModals(response)
+    })
+  }
+  return;
 }
 
 export default createEventsFeedHtml;
