@@ -6,7 +6,7 @@ order: 2
 
 A current KCC photo ID card is required to check out books and other materials. The barcode number on the card is used as a password for some electronic resources and web resources available off campus.
 
-Photo IDs can be obtained in the Student Affairs - Registration area.
+For more information see [ID cards](https://www.kcc.edu/about/police-and-safety/#id-cards).
 
 ### Card Fees
 {: .typography__h3 }
