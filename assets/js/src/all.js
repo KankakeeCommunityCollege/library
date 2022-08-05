@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(() => {
       if (path == TUTORING_PAGE_PATH) {
         loadModule('setIframeHeight');
-        loadModule('styleIframe');
       }
     })
 });
