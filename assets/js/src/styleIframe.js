@@ -5,16 +5,18 @@ function styleIframe() {
   const iframe = document.querySelector('.iframeTableStyling');
   //const style = createStyleEl();
 
-
-  console.log(iframe);
   iframe.addEventListener('load', ()=> {
     //console.log(iframe.contentDocument.body.querySelector('table.table'));
-    const table = iframe.contentDocument.body.querySelector('table.table');
-    const caption = table.querySelector('caption');
+    const documentBody = iframe.contentWindow.document.body;
+    const table = documentBody.querySelector('table');
+    // const caption = table.querySelector('caption');
+
+    console.log(documentBody);
+    
     
     table.classList.add('table', 'table-striped', 'responsive');
     table.id = 'Data';
-    caption.style = 'caption-side: top; font-size: 1.1rem;'
+    // caption.style = 'caption-side: top; font-size: 1.1rem;'
     const list = table.querySelectorAll('th');
 
     for (let i = 0, len = list.length; i < len; i++ ) {

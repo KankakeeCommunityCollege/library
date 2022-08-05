@@ -1,21 +1,54 @@
 ---
 layout: widget
 ---
+
+
+<script src="https://kankakee.libcal.com/js/hours_grid.js?002"></script>
+<div id="s-lc-whw13235"></div>
 <script>
-  springshare_widget_config_1597153168781 = {
-    path: 'boxes/24643875'
-  };
+$(function(){
+var week13235 = new $.LibCalWeeklyGrid( $("#s-lc-whw13235"), { iid: 5152, lid: 13235, systemTime: false });
+});
 </script>
-<div id="s-lg-widget-1597153168781"></div>
-<script>
-  ! function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-      p = /^http:/.test(d.location) ? 'http' : 'https';
-    if (!d.getElementById(id)) {
-      js = d.createElement(s);
-      js.id = id;
-      js.src = p + "://lgapi-us.libapps.com/widgets.php?site_id=1086&widget_type=8&output_format=1&widget_title=Schedule&widget_height=250&widget_width=100%25&widget_embed_type=1&guide_id=110115&box_id=24643875&map_id=28923751&content_only=0&include_jquery=0&config_id=1597153168781";
-      fjs.parentNode.insertBefore(js, fjs);
-    }
-  }(document, "script", "s-lg-widget-script-1597153168781");
-</script>
+<!-- Please note: The following styles are optional, feel free to modify! //-->
+<style>
+.s-lc-whw thead { background-color: #F5F5F5; }
+.s-lc-whw-head-date { color: #5F5F5F; }
+.s-lc-whw-today-h {  background-color: #ddd; }
+.s-lc-whw-today { background-color: #F5F5F5; }
+.s-lc-whw-bh { text-align: right; white-space: nowrap; }
+.s-lc-whw-locname { font-weight: bold;}
+.s-lc-whw-sublocname{ padding-left: 10px!important; }
+.s-lc-whw-footnote { color: #555; font-size: 80%; }
+.s-lc-whw-footnote td:hover { background-color:#fff!important;}
+/* ================================================================
+  WZ CUSTOM STYLE RULES TO UPDATE THE OLD BOOTSTRAP v3 CLASS RULES closer to v4
+  
+  The below `.btn-default` styles are used to style the old Bootstrap v3 class
+  (`.btn-default`) as like the newer Bootstrap 4 `.btn-outline-primary` class.
+  ================================================================ */
+.btn-default {color: #007bff; border-color: #007bff;}
+.btn-default:hover, .btn-default:active { color: #fff; background-color: #007bff; border-color: #007bff;}
+.btn-outline-primary.focus, .btn-outline-primary:focus { box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 50%);}
+{%- comment -%}
+/* Below styles can be removed if you are already using Bootstap v3 in host page */
+/* ===================================================================
+    These Bootstrap v3 styles have been removed by WZ b/c we have Bootstrap v4 instead
+     which provides equivalent styling using the same selectors and/or classnames
+    =================================================================== */
+/*
+.s-lc-whw-cont {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 12px;}
+.s-lc-whw-pr, .s-lc-whw-ne{ padding: 5px 10px; font-size: 12px; line-height: 1.5; border-radius: 3px; color: #333; background-color: #fff; border-color: #ccc; display: inline-block; margin-bottom: 0; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; background-image: none; border: 1px solid transparent; white-space: nowrap; }
+.s-lc-whw-pr:disabled { background-color: #efefef; }
+.s-lc-whw-ne:disabled { background-color: #efefef; }
+.s-lc-whw { width: 100%; margin-bottom: 20px; max-width: 100%; background-color: transparent; border-bottom: none; border-left: none; border-collapse: collapse; border-spacing: 0; }
+.s-lc-whw>tbody>tr>td { padding: 5px; }
+.s-lc-whw>thead>tr>th { vertical-align: bottom; border-bottom: 2px solid #ddd; padding: 5px;}
+.s-lc-whw th { border-top: none; border-bottom: none; border-right: none;}
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+@media (max-width: 768px) {
+   .s-lc-whw-cont .table-responsive { width: 100%; margin-bottom: 15px; overflow-y: hidden; overflow-x: scroll; -ms-overflow-style: -ms-autohiding-scrollbar; border: 1px solid #ddd; -webkit-overflow-scrolling: touch; }
+   .s-lc-whw td { white-space: nowrap; }
+} */
+{%- endcomment -%}
+</style>
