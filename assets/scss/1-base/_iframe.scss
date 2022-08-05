@@ -25,7 +25,7 @@
   height: 0;
   margin-left: -10px;
   margin-right: -10px;
-  padding-bottom: 460px;
+  padding-bottom: 530px;
   padding-top: 25px;
   position: relative;
   & iframe {
@@ -39,6 +39,6 @@
 
 @media screen and (min-width: 992px) {
   .iframe__wrapper--hours {
-    padding-bottom: 340px;
+    padding-bottom: 450px;
   }
 }
