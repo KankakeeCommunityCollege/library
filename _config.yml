@@ -5,6 +5,7 @@ url: 'https://library.kcc.edu' ## NO TRAILING SLASHES!!/<--nope
 timezone: America/Chicago
 port: 3000
 theme: "kcc-gem-theme"
+## BUILD
 google-tag_key: GTM-N73VC4W
 #core_site: true
 #translate: true ## Uncomment to activate Google Translate Powers!!
