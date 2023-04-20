@@ -31,6 +31,14 @@ const errorMessage = `
       </div>
     </div>
 </div><div></div>`;
+function adjustIframeHeight() {
+  const hoursWidget = document.getElementById('hoursWidget');
+
+  hoursWidget.parentElement.setAttribute(
+    'style',
+    `padding-bottom: ${hoursWidget.contentWindow.document.body.scrollHeight}px;`
+  );
+}
 /**
  * 
  * @param {function} res - A `resolve()` callback passed from a Promise in `./all.js`. The Promise needs to resolve after the events feed is build
@@ -44,10 +52,28 @@ function getLatestFeedEvents(res, rej, SLICK_PARAMS) {
       return gapi.client.sheets.spreadsheets.values.get(SHEET_PARAMS);
     }).then(response => {
       return import('./createEventsFeedHtml').then(({ default: createEventsFeedHtml }) => {
-        return createEventsFeedHtml(response);
+        createEventsFeedHtml(response);
+        return res();
       });
     }).then(() => {
-      return res();
+      const delay = 250;
+      let throttled = false;
+
+      adjustIframeHeight();
+
+      window.addEventListener('resize', () => {
+        if (!throttled) {
+          
+          adjustIframeHeight();
+          
+          throttled = true;
+
+          window.setTimeout(() => {
+            throttled = false;
+          }, delay);
+        }
+      });
+
     }, err => {
       console.error('Execute error:', err);
       // In case of error

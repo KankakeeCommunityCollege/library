@@ -2,6 +2,18 @@ const PARENT = document.getElementById('EventsSlider');
 const monthNames = [
   'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
 ];
+const removeZeroPrefix = str => str.replace(
+  /^0(\d)$/,
+  `$1`
+);
+// Incoming date/strings are in the YYYY-MM-DD format
+// Converting to the M/D/YYYY ensures correct date-parsing
+const formatDate = str => str.replace(
+  /(\d{4})-(\d{2})-(\d{2})/g,
+  (match, p1, p2, p3) => {
+    return `${removeZeroPrefix(p2)}/${removeZeroPrefix(p3)}/${p1}`;
+  }
+);
 
 function noEventsHandler(html) {
   return html = `
@@ -22,15 +34,15 @@ function noEventsHandler(html) {
 function loopOverEvents(data, html) {
   data.forEach(event => {
     // Destructuring-assignment of each item used from in the feed.
-    let [ title,,,,,eventId,date,,,descShort,,location,,,,,, ] = event;
-    const d = new Date(date);
+    let [title, , , , , eventId, date, , , descShort, , location, , , , , ,] = event;
+    const d = new Date(formatDate(date));
 
     return html += `
 <div class="eventsSlide">
     <div class="events row">
       <div class="events__left col-2 px-0 py-4 text-center">
         <span class="events__month">${monthNames[d.getMonth()]}</span>
-        <pan class="events__date">${d.getDate() + 1}</span>
+        <pan class="events__date">${d.getDate()}</span>
       </div>
       <div class="events__right events__info-wrapper pt-1 col-10">
         <a href="#eventId${eventId}" role="button" data-toggle="modal" class="events__link">
