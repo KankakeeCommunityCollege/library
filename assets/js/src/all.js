@@ -47,7 +47,7 @@ function loadModule(module) { // Webpack 5 provides the dynamic ES6 import() fun
     })
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   Promise.resolve()
     .then(() => {
       if (path == '/') {
