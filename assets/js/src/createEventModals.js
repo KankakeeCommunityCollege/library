@@ -31,32 +31,47 @@ function loopOverEvents(data, html) {
       title,
       link,
       descriptionLong,
-      category,,
-      eventId,,,,,,,,
+      category, ,
+      eventId,
+      potentialEventId, , , , , , ,
       registrationRequired,
       seats,
-      attending,,
+      attending,
+      potentialAttending,
     ] = event;
+
+    const id = (eventId.search(/^https?:\/\/kankakee\..+$/g) !== -1) ? potentialEventId : eventId;
+    let reg, seat, attend;
+
+    if (registrationRequired === '') {
+      reg = seats;
+      seat = attending;
+      attend = potentialAttending;
+    } else {
+      reg = registrationRequired;
+      seat = seats;
+      attend = attending;
+    }
 
     // Bootstrap 4 markup for a modal
     return html += `
-<div class="modal fade" id="eventId${eventId}" tabindex="-1" aria-labelledby="eventTitle${eventId}" aria-hidden="true">
+<div class="modal fade" id="eventId${id}" tabindex="-1" aria-labelledby="eventTitle${id}" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title typography__h5" id="eventTitle${eventId}">${title}</h5>
+        <h5 class="modal-title typography__h5" id="eventTitle${id}">${title}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ${registrationRequired == 'TRUE' ? `<p><strong>Registration is required:</strong>&nbsp;<a href="${link}">${link}</a><br>There are ${seats - attending} seats available.</p>` : ''}
+        ${reg == 'TRUE' ? `<p><strong>Registration is required:</strong>&nbsp;<a href="${link}">${link}</a><br>There are ${seat - attend} seats available.</p>` : ''}
         <div class="card mb-3">
           <div class="card-header">
             <h6 class="typography__h6">${category}</h6>
           </div>
           <div class="card-body">
-            <p><strong>Event link:</strong>&nbsp;<a class="links__external" href="${link}">${link}</a></p>
+            <p><strong>Event link:</strong>&nbsp;<a class="links__external" target="_blank" rel="noopener noreferrer" href="${link}">${link}</a></p>
             <p>${formatDescriptionText(descriptionLong)}</div></p>
           </div>
         <p>
