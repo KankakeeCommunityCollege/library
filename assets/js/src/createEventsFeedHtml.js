@@ -34,8 +34,15 @@ function noEventsHandler(html) {
 function loopOverEvents(data, html) {
   data.forEach(event => {
     // Destructuring-assignment of each item used from in the feed.
-    let [title, , , , , eventId, date, , , descShort, , location, , , , , ,] = event;
-    const d = new Date(formatDate(date));
+    let [title, , , , , eventId, date, potentialDate, , descShort, potentialDesc, location, potentialLocation, , , , ,] = event;
+    const desc = (descShort.search(/\d?\d:\d\d:\d\d/g) !== -1) ? potentialDesc : descShort;
+    const loc = (location === '') ? potentialLocation : location;
+    const id = (eventId.search(/https?:\/\/kankakee\..+$/g) !== -1) ? date : eventId;
+    let d = new Date(formatDate(date));
+
+    if (!(d instanceof Date && !isNaN(d))) {
+      d = new Date(potentialDate);
+    }
 
     return html += `
 <div class="eventsSlide">
@@ -45,10 +52,10 @@ function loopOverEvents(data, html) {
         <pan class="events__date">${d.getDate()}</span>
       </div>
       <div class="events__right events__info-wrapper pt-1 col-10">
-        <a href="#eventId${eventId}" role="button" data-toggle="modal" class="events__link">
+        <a href="#eventId${id}" role="button" data-toggle="modal" class="events__link">
           <span class="events__title">${title}</span>
-          <span class="events__description mt-2">${descShort}</span>
-          <span class="events__location mt-2">${location}</span>
+          <span class="events__description mt-2">${desc}</span>
+          <span class="events__location mt-2">${loc}</span>
         </a>
       </div>
     </div>
