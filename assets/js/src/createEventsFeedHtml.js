@@ -41,7 +41,7 @@ function loopOverEvents(data, html) {
     let d = new Date(formatDate(date));
 
     if (!(d instanceof Date && !isNaN(d))) {
-      d = new Date(potentialDate);
+      d = new Date(formatDate(potentialDate));
     }
 
     return html += `
