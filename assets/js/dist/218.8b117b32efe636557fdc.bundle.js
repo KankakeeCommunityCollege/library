@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkcc_library=self.webpackChunkkcc_library||[]).push([[218],{218:function(c,e,o){o.r(e),e.default=function(){if(document.querySelector("#accordion")&&window.location.hash){const c=window.location.hash.replace(/(^\/|\/$)/g,"");if(document.querySelector(c)){const e=document.querySelector(c+".collapse");$(e).collapse("show")}}}}}]);
