@@ -23,8 +23,8 @@ These resources are available to improve your skills and improve your chances fo
 {: .typography__h3 .mb-1 }
 
 - [Canvas Guides](https://guides.instructure.com/){: target="_blank" rel="noopener noreferrer" }
-- [Online Learning Support](http://www.kcc.edu/students/helpful/onlinelearningsupport/Pages/default.aspx){: target="_blank" rel="noopener noreferrer" }
-- [Student Orientation to Canvas](http://www.kcc.edu/students/helpful/onlinelearningsupport/Pages/canvasfaq.aspx){: target="_blank" rel="noopener noreferrer" }
+- [Online Learning Support](https://www.kcc.edu/academics/#online-learning-support)
+- [Student Orientation to Canvas](https://www.kcc.edu/academics/#canvas-faq)
 
 ### Accounting
 {: .typography__h3 .mb-1 }
