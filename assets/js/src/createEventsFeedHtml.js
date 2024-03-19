@@ -36,6 +36,7 @@ function loopOverEvents(data, html) {
     // Destructuring-assignment of each item used from in the feed.
     let [title, , , , , eventId, date, potentialDate, , descShort, potentialDesc, location, potentialLocation, , , , ,] = event;
     const desc = (descShort.search(/\d?\d:\d\d:\d\d/g) !== -1) ? potentialDesc : descShort;
+    const description = (desc !== '') ? `<span class="events__description mt-2">${desc}</span>` : '';
     const loc = (location === '') ? potentialLocation : location;
     const id = (eventId.search(/https?:\/\/kankakee\..+$/g) !== -1) ? date : eventId;
     let d = new Date(formatDate(date));
@@ -54,7 +55,7 @@ function loopOverEvents(data, html) {
       <div class="events__right events__info-wrapper pt-1 col-10">
         <a href="#eventId${id}" role="button" data-toggle="modal" class="events__link">
           <span class="events__title">${title}</span>
-          <span class="events__description mt-2">${desc}</span>
+          ${description}
           <span class="events__location mt-2">${loc}</span>
         </a>
       </div>
