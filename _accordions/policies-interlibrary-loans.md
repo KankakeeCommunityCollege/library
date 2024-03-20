@@ -18,12 +18,12 @@ Books are usually available for loan from other libraries. Certain types of mate
 ### Book Requests
 {: .typography__h3 }
 
-Patrons should first search [WorldCat](http://www.firstsearch.org/){: target="_blank" rel="noopener noreferrer" } (contact the library for the password) and look for an 'ILL' option to request the item. This will automatically route the request to library staff. If the option is unavailable, send an email to [bcastillo@kcc.edu](mailto:bcastillo@kcc.edu), including the exact book title and author; the year of publication and ISBN number; your first and last name; your KCC ID barcode number; and a telephone number or email address. Telephone requests are not accepted.
+Patrons should first search [WorldCat](https://firstsearch.oclc.org/){: target="_blank" rel="noopener noreferrer" } (contact the library for the password) and look for an 'ILL' option to request the item. This will automatically route the request to library staff. If the option is unavailable, send an email to [bcastillo@kcc.edu](mailto:bcastillo@kcc.edu), including the exact book title and author; the year of publication and ISBN number; your first and last name; your KCC ID barcode number; and a telephone number or email address. Telephone requests are not accepted.
 
 ### Article Requests
 {: .typography__h3 }
 
-Patrons should first search KCC's [online databases](http://kcc.libguides.com/az.php){: target="_blank" rel="noopener noreferrer" } to ensure that access is not already available. If the article is unavailable, please submit a request using the following form.
+Patrons should first search KCC's [online databases](https://kcc.libguides.com/az.php){: target="_blank" rel="noopener noreferrer" } to ensure that access is not already available. If the article is unavailable, please submit a request using the following form.
 
  <div class="mb-4" id="form_button_8d49f10dcb7f170c0936a1866e70010a"></div><script type="text/javascript" src="https://kcc.libwizard.com/embed_button.php?id=8d49f10dcb7f170c0936a1866e70010a&noheader=0&type=button&open-button-text=Request%20an%20Article&open-button-color=%23003768&text-color=%23ffffff" crossorigin="anonymous"></script>
 
