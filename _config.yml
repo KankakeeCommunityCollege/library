@@ -2,6 +2,7 @@ title: "Kankakee Community College"
 site_name: "Library"
 public-url: "https://library.kcc.edu" ## This gets generated into the link that displays in the footer (the one above the social icons)
 url: 'https://library.kcc.edu' ## NO TRAILING SLASHES!!/<--nope
+canonical_baseurl: 'https://library.kcc.edu'
 timezone: America/Chicago
 port: 3000
 theme: "kcc-gem-theme"
