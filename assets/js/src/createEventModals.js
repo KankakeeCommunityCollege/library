@@ -1,3 +1,10 @@
+// ================================================================================================ //
+// Bootstrap 5 Modal JS must be imported to enable the modals built by this JS module to function   //
+// Our theme dynamically imports BS5 Modal JS into pages containing modal markup on page load.      //
+// Since the modal markup is not present on page load we need to manually import it here.           //
+// The `Modal` module does not need to be called directly to work if modal markup is present...     //
+// ================================================================================================ //
+import _Modal from 'bootstrap/js/dist/modal';
 /**
  * 
  * Custom JS to build modals for the Library Events RSS feed
@@ -5,7 +12,7 @@
  * Library Events have an RSS for "events in the next month" from the LibCal system
  * RSS is imported into Google Sheets spreadsheet (to bypass CORS for fetch() or or XMLHttpRequest())
  * Spreadsheet is then fetched using Google Sheets API v4
- * @constant {object} PARENT = The parent element (built into the HTML) that receives the modal-html built by this module
+ * @constant {object} parent = The parent element (built into the HTML) that receives the modal-html built by this module
  * @param {object} response - The response object from the Google API `spreadsheets.values.get()` method
  * @constant {array} values - The values from the `spreadsheets.values.get()` call. The sheet's contents is represented as an array, holding one array for each row in the sheet.
  * values = [ // Represents the spreadsheet contents:
@@ -17,7 +24,7 @@
  * Modals are opened by clicking on an event in the events-slider/carousel
  * 
  */
-const PARENT = document.getElementById('eventsModals'); // Built into library homepage's HTML
+const parent = document.getElementById('eventsModals'); // Built into library homepage's HTML
 
 function formatDescriptionText(string) {
   const strongInfo = string.replace(/^\*([^\*]+:)\*(.+)$/gm, `<strong>$1</strong>$2`);
@@ -25,8 +32,8 @@ function formatDescriptionText(string) {
   return strong.replace(/\n/g, '<br>');
 }
 
-function loopOverEvents(data, html) {
-  data.forEach(event => {
+function loopOverEvents(data) {
+  return ([...data].map(event => {
     let [ // These variables correspond to each column from the events in the Google Sheet
       title,
       link,
@@ -54,15 +61,13 @@ function loopOverEvents(data, html) {
     }
 
     // Bootstrap 4 markup for a modal
-    return html += `
+    return (`
 <div class="modal fade" id="eventId${id}" tabindex="-1" aria-labelledby="eventTitle${id}" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title typography__h5" id="eventTitle${id}">${title}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         ${reg == 'TRUE' ? `<p><strong>Registration is required:</strong>&nbsp;<a href="${link}">${link}</a><br>There are ${seat - attend} seats available.</p>` : ''}
@@ -89,13 +94,13 @@ function loopOverEvents(data, html) {
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-</div>`;
-  });
-  return html;
+</div>`)
+    }).join('')
+  );
 }
 
 function createEventModals(response) {
@@ -106,11 +111,9 @@ function createEventModals(response) {
     return;
 
   // The firs array/row of values is a heading-cell of info about the sheet, and not data that we need.
-  const data = values.slice(1, values.length);
-  let html = '';
-
-  html = loopOverEvents(data, html);
-  return PARENT.innerHTML = html;
+  const data = values.slice(1);
+  const html = loopOverEvents(data);
+  return parent.innerHTML = html;
 }
 
 export default createEventModals;
