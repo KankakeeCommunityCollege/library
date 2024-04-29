@@ -1,4 +1,3 @@
-const PARENT = document.getElementById('EventsSlider');
 const monthNames = [
   'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
 ];
@@ -10,13 +9,13 @@ const removeZeroPrefix = str => str.replace(
 // Converting to the M/D/YYYY ensures correct date-parsing
 const formatDate = str => str.replace(
   /(\d{4})-(\d{2})-(\d{2})/g,
-  (match, p1, p2, p3) => {
+  (_m, p1, p2, p3) => {
     return `${removeZeroPrefix(p2)}/${removeZeroPrefix(p3)}/${p1}`;
   }
 );
 
-function noEventsHandler(html) {
-  return html = `
+function noEventsHandler() {
+  return (`
 <div>
     <div class="events mx-0 row">
       <div class="events__left col-2 px-0 py-4 text-center"></div>
@@ -28,11 +27,11 @@ function noEventsHandler(html) {
           events calendar</a> for future events or check back later.</span>
       </div>
     </div>
-</div>`;
+</div>`);
 }
 
-function loopOverEvents(data, html) {
-  data.forEach(event => {
+function loopOverEvents(data) {
+  return ([...data].map(event => {
     // Destructuring-assignment of each item used from in the feed.
     let [title, , , , , eventId, date, potentialDate, , descShort, potentialDesc, location, potentialLocation, , , , ,] = event;
     const desc = (descShort.search(/\d?\d:\d\d:\d\d/g) !== -1) ? potentialDesc : descShort;
@@ -45,7 +44,7 @@ function loopOverEvents(data, html) {
       d = new Date(formatDate(potentialDate));
     }
 
-    return html += `
+    return (`
 <div class="eventsSlide">
     <div class="events row">
       <div class="events__left col-2 px-0 py-4 text-center">
@@ -53,33 +52,34 @@ function loopOverEvents(data, html) {
         <pan class="events__date">${d.getDate()}</span>
       </div>
       <div class="events__right events__info-wrapper pt-1 col-10">
-        <a href="#eventId${id}" role="button" data-toggle="modal" class="events__link">
+        <a href="#eventId${id}" role="button" data-bs-toggle="modal" class="events__link">
           <span class="events__title">${title}</span>
           ${description}
           <span class="events__location mt-2">${loc}</span>
         </a>
       </div>
     </div>
-</div>`;
-  });
-  return html;
+</div>`)
+    }).join('')
+  );
 }
 
 /**
  *
- * @const {boolean} NO_EVENTS - Tests if the Google Sheet has any events.
+ * @const {boolean} noEvents - Tests if the Google Sheet has any events.
  *                              Returns `true` if there are no events, `false` if there are.
+ * @param {object} response - Response object returned from Google Sheets API
+ * @param {Element} parent - The element already in the page to injected the feed into
  *
  */
-function createEventsFeedHtml(response) {
-  const values = response.result.values;
-  const data = values.slice(1, values.length);
-  const NO_EVENTS = (values[1][0] == '#N/A' || data.length == 0); // If first cell of the second row contains "#N/A" or the length is 0 there are no events
-  let html = '';
+function createEventsFeedHtml(response, parent) {
+  const values = response.result.values; // data from the spreadsheet is under `result.values` key
+  const data = values.slice(1); // First row is not needed
+  const noEvents = (values[1][0] == '#N/A' || data.length == 0); // If first cell of the second row contains "#N/A" or the length is 0 there are no events
+  const html = (noEvents) ? noEventsHandler() : loopOverEvents(data);
 
-  NO_EVENTS ? html = noEventsHandler(html) : html = loopOverEvents(data, html);
-  PARENT.innerHTML = html;
-  if (!NO_EVENTS) {
+  parent.innerHTML = html;
+  if (!noEvents) {
     return import('./createEventModals').then(({ default: createEventModals }) => {
       return createEventModals(response)
     })

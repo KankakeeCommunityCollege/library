@@ -1,1 +1,0 @@
-(self.webpackChunkkcc_library=self.webpackChunkkcc_library||[]).push([[143],{143:function(){document.addEventListener("DOMContentLoaded",(function(){[].forEach.call(document.querySelectorAll("img[data-src]"),(function(t){t.setAttribute("src",t.getAttribute("data-src")),t.onload=function(){t.removeAttribute("data-src")}}))}))}}]);
