@@ -1,7 +1,14 @@
-function watchForCollapseOpen(el) {
-  const jQueryCollapseEl = $(el);
-
-  jQueryCollapseEl.on('shown.bs.collapse', (e)=> {
+// ================================================================== //
+// iframe elements inside a collapsed Bootstrap 5 element do not      //
+//  render at the correct hight. This module is a fix to adjust       //
+//  the iframe height when it's collapsed parent element is expanded  //
+// ================================================================== //
+function watchForCollapseOpen(item) {
+  /**
+   * @see https://getbootstrap.com/docs/5.3/components/collapse/#events for info on BS5 collapse event:
+   *  'shown.bs.collapse' event is a Bootstrap 5 event that can be picked up with addEventListener()
+   */
+  item.addEventListener('shown.bs.collapse', e => {
     const visibleIframe = e.target.querySelector('.iframeJSHeight');
 
     if ( visibleIframe.contentDocument ) {
@@ -17,13 +24,13 @@ function setIframeHeight() {
   if ( ! document.querySelector('#accordion .collapse .iframeJSHeight') )
     return;
 
-  const collapseContentNodeList = document.querySelectorAll('.collapse');
+  const collapseList = document.querySelectorAll('.collapse');
 
-  for (let i = 0, len = collapseContentNodeList.length; i < len; i++ ) {
-    const el = collapseContentNodeList[i];
-
-    el.querySelector('.iframeJSHeight') ? watchForCollapseOpen(el) : null;
-  }
+  [...collapseList].forEach(item => {
+    if (item.querySelector('.iframeJSHeight')) {
+      watchForCollapseOpen(item);
+    }
+  });
 }
 
 export default setIframeHeight;

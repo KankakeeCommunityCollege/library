@@ -10,14 +10,14 @@
 import '../../scss/main.scss'; // Import the main SCSS file for compilation via Webpack 5
 
 // Placeholder <div> built into DOM contains 3 placeholder/loading slides. Helps eliminate page-repaint when events are loaded.
-const EVENTS_LOADER = document.getElementById('LoadingEvents');
-const TUTORING_PAGE_PATH = '/tutoring/'; // Path to the tutoring page
+const eventsLoader = document.getElementById('LoadingEvents');
+const tutoringPagePath = '/tutoring/'; // Path to the tutoring page
 const path = window.location.pathname;
 // Same parameters are used for initializing slick in the `./getLatestFeedEvents.js` module
-const SLICK_PARAMS = { // Slick carousel info found at: <https://kenwheeler.github.io/slick/>
+const slickParams = { // Slick carousel info found at: <https://kenwheeler.github.io/slick/>
   dots: false, // No dots bellow the slider
-  infinite: false, // No lopping of slides
-  slidesToShow: 3,
+  infinite: false, // No looping of slides at end
+  slidesToShow: 3, // How many slides are visible at a time
   prevArrow:'<button type="button" data-role="none" class="prev slick-prev" aria-label="Previous" role="button" style="display: block;">Previous</button>',  // Custom Prev < buttons for slick
   nextArrow:'<button type="button" data-role="none" class="next slick-next" aria-label="Next" role="button" style="display: block;">Next</button>',  // Custom Next > buttons for slick
   responsive: [ // Change slides to show and slides to scroll at different device sizes
@@ -35,43 +35,38 @@ const SLICK_PARAMS = { // Slick carousel info found at: <https://kenwheeler.gith
     }
   ]
 }
-// Finally, some functions!
-function loadModule(module) { // Webpack 5 provides the dynamic ES6 import() functionality
-  const moduleIsObject = typeof module == 'object';
-  let defaultFn;
-
-  moduleIsObject ? defaultFn = module.defaultFn && module : defaultFn = module;
-  return import(`./${ moduleIsObject ? module.path : module}`)
-    .then(({ default: defaultFn }) => {
-      return moduleIsObject ? defaultFn(module.arg) : defaultFn();
-    })
-}
 
 window.addEventListener('load', () => {
   Promise.resolve()
     .then(() => {
       if (path == '/') {
-        $(EVENTS_LOADER).slick(SLICK_PARAMS);
+        $(eventsLoader).slick(slickParams);
         return new Promise((res, rej) => {
           import('./getLatestFeedEvents').then(({ default: getLatestFeedEvents }) => {
-            return getLatestFeedEvents(res, rej, SLICK_PARAMS);
+            return getLatestFeedEvents(res, rej, slickParams);
           })
         }).then(() => {
-          const EVENTS_SLIDER = document.getElementById('EventsSlider');
-          const EVENTS_LIST = EVENTS_SLIDER.querySelectorAll('.eventsSlide'); // Make a NodeList containing each slide
-          const slidesScrolled = EVENTS_LIST.length > 9 ? 3 : 1; // Set number of slides scrolled to 3 when there are a lot of slides (more than 9, otherwise its too tedious to click through)
+          const eventsSlider = document.getElementById('EventsSlider');
+          const eventsList = eventsSlider.querySelectorAll('.eventsSlide'); // Make a NodeList containing each slide
+          // Set number of slides scrolled to 3 when there are a lot of slides (more than 9, otherwise its too tedious to click/swipe through)
+          const slidesScrolled = (eventsList.length > 9) ? 3 : 1;
           
-          SLICK_PARAMS.slidesToScroll = slidesScrolled; // Set the slidesToScroll parameters accordingly (x3)
-          SLICK_PARAMS.responsive[0].settings.slidesToScroll = slidesScrolled;
-          SLICK_PARAMS.responsive[1].settings.slidesToScroll = 1; // Sets slidesToScroll to 1 for screens that only show 1 at a time
-          $(EVENTS_SLIDER).slick(SLICK_PARAMS); // Initiate slick-carousel // Also see SLICK_PARAMS comments for more info on slick-carousel
+          slickParams.slidesToScroll = slidesScrolled; // Set the slidesToScroll parameters accordingly (x3)
+          // Also set slidesToScroll for responsive breakpoints
+          slickParams.responsive[0].settings.slidesToScroll = slidesScrolled;
+          slickParams.responsive[1].settings.slidesToScroll = 1; // Sets slidesToScroll to 1 for screens that only show 1 at a time
+          $(eventsSlider).slick(slickParams); // Initiate slick-carousel // Also see slickParams comments for more info on slick-carousel
         })
       }
     })
-    .then(() => path == '/' ? loadModule('styleHours') : null)
     .then(() => {
-      if (path == TUTORING_PAGE_PATH) {
-        loadModule('setIframeHeight');
+      if (path == '/') {
+        import('./styleHours').then(({ default: styleHours }) => styleHours());
+      }
+    })
+    .then(() => {
+      if (path == tutoringPagePath) {
+        import('./setIframeHeight').then(({ default: setIframeHeight }) => setIframeHeight());
       }
     })
 });

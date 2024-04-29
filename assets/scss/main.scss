@@ -10,12 +10,8 @@
 @import '1-base/svg';
 
 // Modular components
-@import '2-modules/header';
-@import '2-modules/sliders';
-@import '2-modules/local-nav';
-@import '2-modules/social-icons';
-@import '2-modules/error';
 @import '2-modules/hero-slider';
+@import '2-modules/error';
 @import '2-modules/events';
 @import '2-modules/loader';
 
@@ -24,6 +20,7 @@
 @import '3-layout/positioning';
 @import '3-layout/posts';
 @import '3-layout/banner';
+@import '3-layout/margins';
 
 // Page specific styling
 // @import "4-pages/...";

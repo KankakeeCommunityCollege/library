@@ -1,39 +1,36 @@
-const HOURS_WEEK_BUTTON = '[href="#s-lc-fhw-week"]';
-const HOURS_MONTH_BUTTON = '[href="#s-lc-fhw-month"]';
-const HOURS_IFRAME = '#hoursWidget';
-const TIME_VALUES = 'span.s-lc-time';
-const DataTables_SETTINGS_OBJ = {
-  paging: false,
-  info: false,
-  filter: false,
-  ordering: false,
-  order: []
+/**
+ * @see https://datatables.net/ for DataTables configuration
+ */
+const dataTablesSettings = {
+  paging: false, // Don't paginate
+  info: false, // Don't add table info to keep it clean
+  filter: false, // Don't add filter field to keep table clean
+  ordering: false, // Don't allow ordering of table - it's a table of dates so ordering doesn't make sense
+  order: [] // Tells datatables to maintain whatever order the data is already in
 }
 
 function initiateDataTablesOnTable(table) {
   const $table = $(table);
   
-  $(table).DataTable(DataTables_SETTINGS_OBJ);
-  new $.fn.dataTable.Responsive($table, DataTables_SETTINGS_OBJ);
+  /**
+   * @see https://datatables.net/
+   * @todo update to the new version DataTables that doesn't require jQuery
+   */
+  $(table).DataTable(dataTablesSettings);
+  new $.fn.dataTable.Responsive($table, dataTablesSettings);
 }
 
 function styleHours() {
-  if ( window.location.pathname != '/' )
-    return;
+  const iframe = document.getElementById('hoursWidget'); // Iframe built into the page
+  const iframeHeight = iframe.contentDocument.body.offsetHeight;
 
-  const iframe = document.querySelector(HOURS_IFRAME);
-
-  iframe.addEventListener('load', ()=> {
+  iframe.addEventListener('load', _e => {
     const tablesList = iframe.contentDocument.body.querySelectorAll('table.table');
 
-    for (let i = 0, len = tablesList.length; i < len; i++ ) {
-      const table = tablesList[i];
-      
-      table.classList.add('responsive');
+    [...tablesList].forEach(table => {
+      table.classList.add('responsive'); // DataTables class
       initiateDataTablesOnTable(table);
-    }
-
-    const iframeHeight = iframe.contentDocument.body.offsetHeight;
+    });
 
     iframe.width = '100%';
     iframe.height = iframeHeight + 20;
