@@ -1,23 +1,25 @@
 title: "Kankakee Community College"
 site_name: "Library"
-public-url: "https://library.kcc.edu" ## This gets generated into the link that displays in the footer (the one above the social icons)
-url: 'https://library.kcc.edu' ## NO TRAILING SLASHES!!/<--nope
-canonical_baseurl: 'https://library.kcc.edu'
+public-url: "https://www.kcc.edu" ## This gets generated into the link that displays in the footer (the one above the social icons)
+url: 'https://www.kcc.edu/library' ## NO TRAILING SLASHES!!/<--nope
+canonical_baseurl: 'https://www.kcc.edu/library'
 timezone: America/Chicago
 port: 3000
-theme: "kcc-gem-theme-original"
+theme: "kcc-gem-theme"
 google-tag_key: GTM-N73VC4W
-#core_site: true
+theme_config: false
+core_site: false
+subsection_title: "KCC Library"
 #translate: true ## Uncomment to activate Google Translate Powers!!
 nav_links:
   - link_text: Tutoring
-    link_href: tutoring
+    link_href: tutoring/
     button: false
   - link_text: Policies
-    link_href: 'policies'
+    link_href: 'policies/'
     button: false
   - link_text: About
-    link_href: 'about'
+    link_href: 'about/'
     button: false
   - link_text: Faculty Resources
     link_href: 'https://kcc.libguides.com/facultyservices'
@@ -59,16 +61,6 @@ collections:
   icons:
     output: false
     sort_by: 'order'
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-    title: ''
-    permalink: /:categories/:title/
-    baseurl: ../../../
-    categories: news
 permalink: pretty
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -82,10 +74,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 future: true
 # Build settings
 markdown: kramdown
-
-include:
-  - "_accordions/"
-  - "_icons/"
 
 exclude:
   - "node_modules"
