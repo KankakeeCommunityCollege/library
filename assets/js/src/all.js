@@ -39,7 +39,7 @@ const slickParams = { // Slick carousel info found at: <https://kenwheeler.githu
 window.addEventListener('load', () => {
   Promise.resolve()
     .then(() => {
-      if (path == '/') {
+      if (document.getElementById('EventsSlider')) {
         $(eventsLoader).slick(slickParams);
         return new Promise((res, rej) => {
           import('./getLatestFeedEvents').then(({ default: getLatestFeedEvents }) => {
@@ -60,12 +60,12 @@ window.addEventListener('load', () => {
       }
     })
     .then(() => {
-      if (path == '/') {
+      if (document.getElementById('hoursWidget')) {
         import('./styleHours').then(({ default: styleHours }) => styleHours());
       }
     })
     .then(() => {
-      if (path == tutoringPagePath) {
+      if (document.querySelector('.iframeJSHeight')) {
         import('./setIframeHeight').then(({ default: setIframeHeight }) => setIframeHeight());
       }
     })
