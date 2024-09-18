@@ -6,7 +6,7 @@ canonical_baseurl: 'https://www.kcc.edu/library'
 timezone: America/Chicago
 port: 3000
 theme: "kcc-gem-theme"
-google-tag_key: GTM-N73VC4W
+google-tag_key: GTM-TNVWT2L
 theme_config: false
 core_site: false
 subsection_title: "KCC Library"
