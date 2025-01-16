@@ -64,6 +64,25 @@ function loopOverEvents(data) {
   );
 }
 
+// If the 4th item (category) for an event is missing it throws the rest of the event data off.
+// This function checks the 4th item and adjusts the event data if its missing by inserting an empty string.
+function checkData(data) {
+  return (
+    data.map(event => {
+      if (event[3].trim().search(/^https:\/\//) === -1) {
+        // 4th item is category - event data is fine
+        return event;
+      } else {
+        // 4th item is NOT category - adjust event data
+        const start = event.slice(0, 3);
+        const end = event.slice(3);
+        // Add empty string for 4th item
+        return [...start, '', ...end];
+      }
+    })
+  );
+}
+
 /**
  *
  * @const {boolean} noEvents - Tests if the Google Sheet has any events.
@@ -74,14 +93,14 @@ function loopOverEvents(data) {
  */
 function createEventsFeedHtml(response, parent) {
   const values = response.result.values; // data from the spreadsheet is under `result.values` key
-  const data = values.slice(1); // First row is not needed
+  const data = checkData(values.slice(1)); // First row is not needed
   const noEvents = (values[1][0] == '#N/A' || data.length == 0); // If first cell of the second row contains "#N/A" or the length is 0 there are no events
   const html = (noEvents) ? noEventsHandler() : loopOverEvents(data);
 
   parent.innerHTML = html;
   if (!noEvents) {
     return import('./createEventModals').then(({ default: createEventModals }) => {
-      return createEventModals(response)
+      return createEventModals(data);
     })
   }
   return;
