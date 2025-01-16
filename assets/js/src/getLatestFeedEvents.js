@@ -5,6 +5,7 @@ const apiParams = { // This is configuration for Sheets API call with spreadshee
 const sheetParams = { // Construct the necessary parameters object for using the `spreadhseets.values.get()` method
   spreadsheetId: '1MTAbNLbdd112LiyhmMLhocx_najdvePMxoRzIvMh8Uo', // ID of Google Sheets workbook
   range: 'EVENTS' // Spreadsheet to get data from in the workbook
+  // range: 'TEST_SHEET_2' // Spreadsheet for development
 };
 const parent = document.getElementById('EventsSlider'); // Element built into the pages' HTML markup
 // Error message for potential issues when fetching the events using the gapi

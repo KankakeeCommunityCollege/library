@@ -32,6 +32,28 @@ function formatDescriptionText(string) {
   return strong.replace(/\n/g, '<br>');
 }
 
+function createCategoryBadges(category) {
+  const colors = ['primary', 'success', 'secondary', 'warning', 'info', 'danger'];
+  let categories;
+
+  if (category instanceof Array) { // multiple categories will be in array format
+    categories = category
+      .map(
+        (cat, i) => {
+          const idx = i % colors.length; // keep cycling through colors even if i > colors.length
+
+          return `<span class="badge text-bg-${colors[idx]}">${cat}</span>`;
+        }
+      ).join(' ');
+  } else if (category !== '') { // single category is a string
+    categories = `<span class="badge text-bg-primary">${category}</span>`;
+  } else { // no categories is an empty string
+    categories = category;
+  }
+
+  return (categories === '') ? categories : `<p>${categories}</p>`;
+}
+
 function loopOverEvents(data) {
   return ([...data].map(event => {
     let [ // These variables correspond to each column from the events in the Google Sheet
@@ -48,10 +70,9 @@ function loopOverEvents(data) {
     ] = event;
 
     const id = (eventId.search(/^https?:\/\/kankakee\..+$/g) !== -1) ? potentialEventId : eventId;
-    const cardHeader = (category === '') ? '' : `<div class="card-header">
-  <h6 class="typography__h6">${category}</h6>
-</div>`;
     let reg, seat, attend;
+
+    const categories = createCategoryBadges(category);
 
     if (registrationRequired === '') {
       reg = seats;
@@ -63,7 +84,7 @@ function loopOverEvents(data) {
       attend = attending;
     }
 
-    // Bootstrap 4 markup for a modal
+    // Bootstrap 5 markup for a modal
     return (`
 <div class="modal fade" id="eventId${id}" tabindex="-1" aria-labelledby="eventTitle${id}" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -75,8 +96,11 @@ function loopOverEvents(data) {
       <div class="modal-body">
         ${reg == 'TRUE' ? `<p><strong>Registration is required:</strong>&nbsp;<a href="${link}">${link}</a><br>There are ${seat - attend} seats available.</p>` : ''}
         <div class="card mb-3">
-          ${cardHeader}
+          <div class="card-header">
+            <h6 class="typography__h6 mb-0">Details</h6>
+          </div>
           <div class="card-body">
+            ${categories}
             <p><strong>Event link:</strong>&nbsp;<a class="links__external" target="_blank" rel="noopener noreferrer" href="${link}">${link}</a></p>
             <p>${formatDescriptionText(descriptionLong)}</div></p>
           </div>

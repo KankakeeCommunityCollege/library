@@ -38,6 +38,7 @@ window.addEventListener('load', () => {
   Promise.resolve()
     .then(() => {
       if (document.getElementById('EventsSlider')) {
+        import('../../scss/bootstrap-badges.scss');
         $(eventsLoader).slick(slickParams);
         return new Promise((res, rej) => {
           import('./getLatestFeedEvents').then(({ default: getLatestFeedEvents }) => {
