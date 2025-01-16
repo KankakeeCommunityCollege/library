@@ -11,8 +11,6 @@ import '../../scss/main.scss'; // Import the main SCSS file for compilation via 
 
 // Placeholder <div> built into DOM contains 3 placeholder/loading slides. Helps eliminate page-repaint when events are loaded.
 const eventsLoader = document.getElementById('LoadingEvents');
-const tutoringPagePath = '/tutoring/'; // Path to the tutoring page
-const path = window.location.pathname;
 // Same parameters are used for initializing slick in the `./getLatestFeedEvents.js` module
 const slickParams = { // Slick carousel info found at: <https://kenwheeler.github.io/slick/>
   dots: false, // No dots bellow the slider

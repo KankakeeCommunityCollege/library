@@ -48,6 +48,9 @@ function loopOverEvents(data) {
     ] = event;
 
     const id = (eventId.search(/^https?:\/\/kankakee\..+$/g) !== -1) ? potentialEventId : eventId;
+    const cardHeader = (category === '') ? '' : `<div class="card-header">
+  <h6 class="typography__h6">${category}</h6>
+</div>`;
     let reg, seat, attend;
 
     if (registrationRequired === '') {
@@ -72,9 +75,7 @@ function loopOverEvents(data) {
       <div class="modal-body">
         ${reg == 'TRUE' ? `<p><strong>Registration is required:</strong>&nbsp;<a href="${link}">${link}</a><br>There are ${seat - attend} seats available.</p>` : ''}
         <div class="card mb-3">
-          <div class="card-header">
-            <h6 class="typography__h6">${category}</h6>
-          </div>
+          ${cardHeader}
           <div class="card-body">
             <p><strong>Event link:</strong>&nbsp;<a class="links__external" target="_blank" rel="noopener noreferrer" href="${link}">${link}</a></p>
             <p>${formatDescriptionText(descriptionLong)}</div></p>
@@ -103,16 +104,9 @@ function loopOverEvents(data) {
   );
 }
 
-function createEventModals(response) {
-  const values = response.result.values;
-
-  // We don't need any modals if there are no upcoming events (length will always be at least 1 b/c the first row is not data)
-  if (values.length == 1)
-    return;
-
-  // The firs array/row of values is a heading-cell of info about the sheet, and not data that we need.
-  const data = values.slice(1);
+function createEventModals(data) {
   const html = loopOverEvents(data);
+
   return parent.innerHTML = html;
 }
 
