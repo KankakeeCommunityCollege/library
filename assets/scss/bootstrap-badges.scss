@@ -1,0 +1,21 @@
+// ======================================================= //
+// This SCSS file is compiled and dynamically imported in  //
+// `assets/js/src/all.js` (along with other scholarships   //
+// page assets)                                            //
+// ======================================================= //
+// BS5 SCSS partials should maintain the following order   //
+// ======================================================= //
+
+// 1. Functions should be first
+@import '../../node_modules/bootstrap/scss/functions';
+
+// 2. BS5 variable overrides next
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// 3. Vars, mixins, & maps next
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+// 4. BS5 components:
+@import '../../node_modules/bootstrap/scss/badge';
