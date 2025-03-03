@@ -14,10 +14,6 @@ All students--in all course subjects--are welcome to visit for assistance with w
 
 <iframe src="../subject-widget/" frameborder="0" width="100%" class="iframe iframeJSHeight"></iframe>
 
-&nbsp;
-
-&nbsp;
-
 ### Technology and Health Careers
 {: .typography__h3}
 
