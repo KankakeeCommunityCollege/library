@@ -16,9 +16,11 @@ All students--in all course subjects--are welcome to visit for assistance with w
 
 &nbsp;
 
+&nbsp;
+
 ### Technology and Health Careers
 {: .typography__h3}
 
-Tutoring services are also available for Technology and Health Careers courses. To find out if tutoring is offered for a particular Health Career course, please contact Jaime Cyrkiel at [815-802-8804](tel:+18158028804) or [awhalen@kcc.edu](mailto:awhalen@kcc.edu).
+Tutoring services are also available for Technology and Health Careers courses. To find out if tutoring is offered for a particular Health Career course, please contact Abby Whalen at [815-802-8804](tel:+18158028804) or [awhalen@kcc.edu](mailto:awhalen@kcc.edu).
 
 To find out if tutoring is offered for a particular Technology course, please contact Karen Richards at [815-802-8854](tel:+18158028854) or [krichards@kcc.edu](mailto:krichards@kcc.edu).
