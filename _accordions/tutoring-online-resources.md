@@ -17,14 +17,14 @@ These resources are available to improve your skills and improve your chances fo
 {: .typography__h3 .mb-1 }
 
 - [Find your learning strengths](https://www.literacynet.org/mi/assessment/findyourstrengths.html){: target="_blank" rel="noopener noreferrer" }
-- [What is your learning style?](http://www.educationplanner.org/students/self-assessments/learning-styles.shtml){: target="_blank" rel="noopener noreferrer" }
+- [What is your learning style?](https://www.educationplanner.org/students/self-assessments/learning-styles){: target="_blank" rel="noopener noreferrer" }
 
 ### Canvas
 {: .typography__h3 .mb-1 }
 
 - [Canvas Guides](https://guides.instructure.com/){: target="_blank" rel="noopener noreferrer" }
-- [Online Learning Support](https://www.kcc.edu/academics/#online-learning-support)
-- [Student Orientation to Canvas](https://www.kcc.edu/academics/#canvas-faq)
+- [Online Learning Support](https://www.kcc.edu/academics/online-learning/)
+- [Student Orientation to Canvas](https://www.kcc.edu/academics/online-learning/#canvas-faq)
 
 ### Accounting
 {: .typography__h3 .mb-1 }
