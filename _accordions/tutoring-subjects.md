@@ -12,7 +12,7 @@ All students--in all course subjects--are welcome to visit for assistance with w
 * Providing feedback and suggestions during the draft stage of a written assignment
 * Recommending revision strategies to polish students’ writing
 
-<iframe src="../subject-widget/" frameborder="0" width="100%" class="iframe iframeJSHeight"></iframe>
+<iframe title="Tutoring subjects currently covered" src="../subject-widget/" frameborder="0" width="100%" class="iframe iframeJSHeight"></iframe>
 
 ### Technology and Health Careers
 {: .typography__h3}

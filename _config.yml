@@ -88,6 +88,9 @@ exclude:
   - "page-startups"
   - "buildtools/"
   - "postcss.config.js"
+  - "pa11y.sh"
+  - "pa11y.*.json"
+  - "pa11y-log.*.txt"
   - "look-for-deprecated-bs4-classes.mjs"
   - "look-for-deprecated-bs4-js.mjs"
 
