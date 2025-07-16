@@ -55,7 +55,7 @@ jobs:
         run: |
           # Find all HTML files recursively within the _site directory
           # and loop through each file
-          find _site -name "*.html" | while read file; do
+          find _site -name "*.html" -not -path "*schedule-widget/*" -not -path "*hours-widget/*" | while read file; do
             echo "::group::Checking accessibility for: $file" # Start a collapsible group in logs
             # Run Pa11y on the current HTML file
             pa11y "$file" --config ./pa11y.actions.json

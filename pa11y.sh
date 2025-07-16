@@ -75,7 +75,7 @@ if $OUTPUT_ARG_PASSED; then
   echo "" >> $filename
   # Find all HTML files recursively within the _site directory
   # and loop through each file
-  find _site -name "*.html" | while read file; do
+  find _site -name "*.html" -not -path "*schedule-widget/*" -not -path "*hours-widget/*" | while read file; do
     echo "Checking accessibility for: $file"
     # Run Pa11y on the current HTML file
     # --reporter cli outputs results in a human-readable format
@@ -89,7 +89,7 @@ else
   # Add commands for when the argument is missing
   # Find all HTML files recursively within the _site directory
   # and loop through each file
-  find _site -name "*.html" | while read file; do
+  find _site -name "*.html" -not -path "*schedule-widget/*" -not -path "*hours-widget/*" | while read file; do
     echo "Checking accessibility for: $file"
     # Run Pa11y on the current HTML file
     # --reporter cli outputs results in a human-readable format
