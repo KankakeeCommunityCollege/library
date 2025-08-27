@@ -3,6 +3,7 @@ site_name: "Library"
 public-url: "https://www.kcc.edu" ## This gets generated into the link that displays in the footer (the one above the social icons)
 url: 'https://www.kcc.edu/library' ## NO TRAILING SLASHES!!/<--nope
 canonical_baseurl: 'https://www.kcc.edu/library'
+sitemap_baseurl: https://www.kcc.edu/library # Used to prefix the page URLs in sitemap.xml
 timezone: America/Chicago
 port: 3000
 theme: "kcc-gem-theme"
