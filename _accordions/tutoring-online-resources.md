@@ -35,7 +35,7 @@ These resources are available to improve your skills and improve your chances fo
 
 * [Comprehensive grammar and writing](https://www.guidetogrammar.org/grammar/index2.htm){: target="_blank" rel="noreferrer noopener"}
 * [Grammar and writing tips](https://chompchomp.com/rules.htm){: target="_blank" rel="noreferrer noopener"}
-* [Grammatical questions](https://www.apastyle.org/previoustips.html){: target="_blank" rel="noreferrer noopener"}
+* [Grammatical questions](https://apastyle.apa.org/style-grammar-guidelines/grammar){: target="_blank" rel="noreferrer noopener"}
 * [The Purdue online writing lab](https://owl.purdue.edu/){: target="_blank" rel="noreferrer noopener"}
 
 ### Mathematics
