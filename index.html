@@ -63,7 +63,7 @@ page_actions:
           {{ icon[index] }}
         </a>
         <a class="links__no-underline" href="{% unless action.link contains 'http://' or action.link contains 'https://' %}{{ page.baseurl }}{% endunless %}{{ action.link }}">
-          <h4 class="typography__orange-h4 typography__sm-sup">{{ action.service }}</h4>
+          <h3 class="typography__orange-h4 typography__sm-sup">{{ action.service }}</h3>
           <p class="typography__h5--description content__max-width mx-auto">{{ action.description }}</p>
           <a href="{{ action.link }}" class="mt-auto btn btn-primary">{{ action.button_text }}</a>
         </a>
@@ -74,7 +74,7 @@ page_actions:
   <div class="container">
     <div class="row mb-3">
       <div class="col margins__col--top home__col--heading-underline">
-        <h3 id="events" class="typography__section--heading links__offset mb-4">Events</h3>
+        <h2 id="events" class="typography__section--heading links__offset mb-4">Events</h2>
       </div>
     </div>
   </div>

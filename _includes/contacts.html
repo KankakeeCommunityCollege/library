@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col mt-1 home__col--heading-underline{% if page.contacts_background_tan == true %} home__col--heading-underline-tan{% endif %}">
-        <h3 id="contact" class="typography__section--heading margins__heading--btm links__offset">Contacts</h3>
+        <h2 id="contact" class="typography__section--heading margins__heading--btm links__offset">Contacts</h2>
       </div>
     </div>
   {% if page.contacts_background_tan == true %}</div>
@@ -29,7 +29,7 @@
           {% if contact.portrait_image != 'none' %}<img src="{{ page.baseurl }}assets/img/placeholder_square.jpg" data-src="{{ page.baseurl }}{{ contact.portrait_image }}" width="150px" height="150px" alt="Photo of {{ contact.name }}" class="img-fluid contacts__portrait" {% unless contact.general %}itemprop="image" {% endunless %}/>{% endif %}
           </div>
           <div class="col-8 float-right">
-            <h5 class="typography__contacts--name notranslate"{% unless contact.general %} itemprop="name"{% endunless %}>{{ contact.name }}</h5>
+            <h3 class="typography__contacts--name notranslate"{% unless contact.general %} itemprop="name"{% endunless %}>{{ contact.name }}</h3>
             {% if contact.contacts_title %}<h6 class="typography__contacts--title"{% unless contact.general %} itemprop="jobTitle"{% endunless %}>{{ contact.contacts_title }}</h6>{% endif %}
             <p class="notranslate">
               {% if contact.phone %}<a href="tel:1{{ contact.phone | remove: '-' }}" class="links__darker-link"{% unless contact.general %} itemprop="telephone"{% endunless %}>{{ contact.phone }}</a><br>{% endif %}
@@ -51,13 +51,13 @@
       {% else %}
       <div itemscope itemtype="https://schema.org/Person" class="col-sm-6 col-md-4 mb-3">
       {% endif %}
-        <h5 class="typography__contacts--name notranslate"{% unless contact.general %} itemprop="name"{% endunless %}>{{ contact.name }}</h5>
-        {% if contact.contacts_title %}<h6 class="typography__contacts--title"{% unless contact.general %} itemprop="jobTitle"{% endunless %}>{{ contact.contacts_title }}</h6>{% endif %}
+        <h3 class="typography__contacts--name notranslate"{% unless contact.general %} itemprop="name"{% endunless %}>{{ contact.name }}</h3>
+        {% if contact.contacts_title %}<h4 class="typography__contacts--title"{% unless contact.general %} itemprop="jobTitle"{% endunless %}>{{ contact.contacts_title }}</h4>{% endif %}
         <p class="notranslate">
           {% if contact.phone %}<a href="tel:1{{ contact.phone | remove: '-' }}" class="links__darker-link"{% unless contact.general %} itemprop="telephone"{% endunless %}>{{ contact.phone }}</a><br>{% endif %}
           {% if contact.general %}
           {% for item in contact.general %}
-          <span class="typography__contacts--title">{{ item.label }}:</span>&nbsp;<a href="tel:+1{{ item.phone | remove: '-' }}">{{ item.phone }}</a><br>
+          <span class="typography__contacts--title">{{ item.label }}:</span>&nbsp;<a class="links__darker-link" href="tel:+1{{ item.phone | remove: '-' }}">{{ item.phone }}</a><br>
           {% endfor %}
           {% endif %}
           {% if contact.email %}<a class="links__darker-link" target="_blank" href="https://secure.jotform.com/90435102482954?to[first]={{ first }}&amp;to[last]={{ last }}&amp;submitEmail={{ contact.email | remove: '@kcc.edu' }}%40kcc.edu"{% unless contact.general %} itemprop="url"{% endunless %}>Email</a><br>{% endif %}
@@ -77,15 +77,15 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="typography__h6" id="{{ contact.name | downcase | replace: ' ', '-' | remove: '.' | remove: '/' | remove: "'" | remove: '’' }}-label">{{ contact.name }} Bio</h5>
+        <h3 class="typography__h6" id="{{ contact.name | downcase | replace: ' ', '-' | remove: '.' | remove: '/' | remove: "'" | remove: '’' }}-label">{{ contact.name }} Bio</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         {% if contact.portrait_image != 'For departments with no contact photos, do not change this field.' and contact.portrait_image != 'none' %}<img src="{{ page.baseurl }}assets/img/placeholder_square.jpg" data-src="{{ page.baseurl }}{{ contact.portrait_image }}" class="img-fluid float-left mr-2 mb-2" width="150px" height="150px" alt="Photo of {{ contact.name }} KCC's {{ contact.contacts_title }}">{% endif %}
-        <h5 class="typography__contacts--name notranslate">{{ contact.name }}</h5>
-        {% if contact.contacts_title %}<h6 class="typography__contacts--title">{{ contact.contacts_title }}</h6>{% endif %}
+        <h3 class="typography__contacts--name notranslate">{{ contact.name }}</h3>
+        {% if contact.contacts_title %}<h4 class="typography__contacts--title">{{ contact.contacts_title }}</h4>{% endif %}
         {{ contact.content }}
       </div>
       <div class="modal-footer">
