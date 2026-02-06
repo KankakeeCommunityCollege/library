@@ -1,0 +1,17 @@
+##############################
+##     Pa11y CI results     ##
+##############################
+
+##     Running Pa11y CI:
+##         DATETIME: 2026-01-23T13_45_15
+##         SITEMAP:  https://www.kcc.edu/library/pa11y-ci-sitemap.xml?id=1
+
+
+Running Pa11y on 5 URLs:
+ > https://www.kcc.edu/library/404.html#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/library/about/#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/library/#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/library/policies/#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/library/tutoring/#please-open-all-accordions - 0 errors
+
+✔ 5/5 URLs passed
