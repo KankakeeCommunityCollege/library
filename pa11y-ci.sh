@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SITEMAP='https://www.kcc.edu/library/pa11y-ci-sitemap.xml'
+SITEMAP='https://www.kcc.edu/library/pa11y-ci-sitemap.xml?id=1'
 # Folder to keep logs in
 LOGFOLDER="./pa11y-ci-logs"
 
