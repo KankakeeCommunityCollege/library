@@ -90,7 +90,7 @@ function loopOverEvents(data) {
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title typography__h5" id="eventTitle${id}">${title}</h5>
+        <h3 class="modal-title typography__h5" id="eventTitle${id}">${title}</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
