@@ -13,8 +13,10 @@ function watchForCollapseOpen(item) {
 
     if ( visibleIframe.contentDocument ) {
       const height = visibleIframe.contentDocument.body.offsetHeight;
+      const cellsWithHeaders = visibleIframe.contentDocument.body.querySelectorAll('td[headers]');
 
-      return visibleIframe.height = height + 20;
+      visibleIframe.height = height + 20;
+      [...cellsWithHeaders].forEach(cell => cell.removeAttribute('headers'));
     }
   });
 }
