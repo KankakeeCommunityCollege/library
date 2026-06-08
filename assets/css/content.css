@@ -1,36 +1,253 @@
-h2.typography__h2 {
+h1.typography__h1 {
   color: #666;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
   font-weight: 500;
 }
 
-h3.typography__h3 {
+h1.typography__h2 {
   color: #0f3b63;
   font-family: "Roboto", sans-serif;
   font-size: 1.75rem;
   font-weight: 600;
 }
 
-h4.typography__h4 {
+h1.typography__h3 {
   color: #c61f48;
   font-family: "Roboto", sans-serif;
   font-size: 1.7rem;
   font-weight: 600;
 }
 
-h5.typography__h5 {
+h1.typography__h4 {
   color: #666;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-h6.typography__h6 {
+h1.typography__h5 {
   color: #666;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
+}
+
+h1.typography__h6 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+h2.typography__h1 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h2.typography__h2 {
+  color: #0f3b63;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h2.typography__h3 {
+  color: #c61f48;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+h2.typography__h4 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h2.typography__h5 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+h2.typography__h6 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+h3.typography__h1 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h3.typography__h2 {
+  color: #0f3b63;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h3.typography__h3 {
+  color: #c61f48;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+h3.typography__h4 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h3.typography__h5 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+h3.typography__h6 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+h4.typography__h1 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h4.typography__h2 {
+  color: #0f3b63;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h4.typography__h3 {
+  color: #c61f48;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+h4.typography__h4 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h4.typography__h5 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+h4.typography__h6 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+h5.typography__h1 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h5.typography__h2 {
+  color: #0f3b63;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h5.typography__h3 {
+  color: #c61f48;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+h5.typography__h4 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h5.typography__h5 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+h5.typography__h6 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+h6.typography__h1 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h6.typography__h2 {
+  color: #0f3b63;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h6.typography__h3 {
+  color: #c61f48;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+h6.typography__h4 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h6.typography__h5 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+h6.typography__h6 {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
 }
 
 img.float-image-left {
