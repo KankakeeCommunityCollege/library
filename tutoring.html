@@ -32,29 +32,26 @@ slides:
     text: The **POWER** of Community
     url: '#'
 ---
+<div class="container tutoring">
+  <h1 class="visually-hidden">KCC Library Tutoring</h1>
+  {% include hero-slider.html %}
+  <div class="row">
+    <div class="col mt-3">
+      {% comment %}<div class="text-center mb-4">
+        <img src="{{ page.baseurl }}{{ page.featured_image }}" class="img__full-width" alt="{{ page.featured_image_alt }}" />
+      </div>{% endcomment %}
+      <div class="editable">
+        <!-- CloudCannon editable region -->
+        <p>As a KCC student, you have access to free tutoring services to assist you as you pursue your degree. Our tutor program is certified by the College Reading and Learning Association (CRLA).</p>
+        <p>Tutoring aims to supplement what is done in the classroom and during study time, not substitute for it. Our qualified staff is trained to assist you in an environment conducive to learning for short-term and long-term academic and personal accomplishment.</p>
+        <p>With that in mind, please share your feedback on the things we are doing well and/or how tutoring services can be more effective. We appreciate your time and value your input. Please use the online <a target="_blank" rel="noopener noreferrer" href="https://kcc.libwizard.com/f/tutoringsurvey">Tutor Feedback Form</a> for your suggestions.</p>
+      </div><!-- End editable region -->
 
-<!-- Build -->
-<main id="content">
-  <div class="container tutoring">
-    {% include hero-slider.html %}
-    <div class="row">
-      <div class="col mt-3">
-        {% comment %}<div class="text-center mb-4">
-          <img src="{{ page.baseurl }}{{ page.featured_image }}" class="img__full-width" alt="{{ page.featured_image_alt }}" />
-        </div>{% endcomment %}
-        <div class="editable">
-          <!-- CloudCannon editable region -->
-          <p>As a KCC student, you have access to free tutoring services to assist you as you pursue your degree. Our tutor program is certified by the College Reading and Learning Association (CRLA).</p>
-          <p>Tutoring aims to supplement what is done in the classroom and during study time, not substitute for it. Our qualified staff is trained to assist you in an environment conducive to learning for short-term and long-term academic and personal accomplishment.</p>
-          <p>With that in mind, please share your feedback on the things we are doing well and/or how tutoring services can be more effective. We appreciate your time and value your input. Please use the online <a target="_blank" rel="noopener noreferrer" href="https://kcc.libwizard.com/f/tutoringsurvey">Tutor Feedback Form</a> for your suggestions.</p>
-        </div><!-- End editable region -->
+      {% include accordion.html %}
 
-        {% include accordion.html %}
-
-        <div class="mt-3 editable">
-          <p>Questions and concerns related to tutoring services can be directed to Tracy Conner, <a href="tel:+18158028403">815-802-8403</a>, or email <a href="mailto:tconner@kcc.edu">tconner@kcc.edu</a>.</p>
-        </div>
+      <div class="mt-3 editable">
+        <p>Questions and concerns related to tutoring services can be directed to Tracy Conner, <a href="tel:+18158028403">815-802-8403</a>, or email <a href="mailto:tconner@kcc.edu">tconner@kcc.edu</a>.</p>
       </div>
     </div>
   </div>
-</main>
+</div>
