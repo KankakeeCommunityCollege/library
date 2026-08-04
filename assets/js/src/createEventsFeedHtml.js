@@ -163,17 +163,15 @@ function checkData(data) {
  */
 function createEventsFeedHtml(response, parent) {
   const values = response.result.values; // data from the spreadsheet is under `result.values` key
-  const data = checkData(values.slice(1)); // First row is not needed
-  const noEvents = (values[1][0] == '#N/A' || data.length == 0); // If first cell of the second row contains "#N/A" or the length is 0 there are no events
-  const html = (noEvents) ? noEventsHandler() : loopOverEvents(data);
+  const noEvents = (values[1][0] == '#N/A' || values.slice(1).length == 0); // If first cell of the second row contains "#N/A" or the length is 0 there are no events
+  const html = (noEvents) ? noEventsHandler() : loopOverEvents(checkData(values.slice(1)));
 
   parent.innerHTML = html;
+
   if (!noEvents) {
-    return import('./createEventModals').then(({ default: createEventModals }) => {
-      return createEventModals(data);
-    })
+    import('./createEventModals')
+      .then(({ default: createEventModals }) => createEventModals(data));
   }
-  return;
 }
 
 export default createEventsFeedHtml;

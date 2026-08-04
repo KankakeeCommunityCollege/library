@@ -33,8 +33,6 @@ function adjustIframeContents() {
 }
 
 function styleHours() {
-  console.log(`It's running`);
-
   // Check if the iframe is already loaded
   if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') {
       adjustIframeContents();
