@@ -68,7 +68,9 @@ function getLatestFeedEvents() {
       return gapi.client.sheets.spreadsheets.values.get(sheetParams);
     }).then(response => {
       return import('./createEventsFeedHtml').then(({ default: createEventsFeedHtml }) => {
-        const result = createEventsFeedHtml(response, parent);
+
+        createEventsFeedHtml(response, parent);
+
         const eventsList = parent.querySelectorAll('.eventsSlide'); // Make a NodeList containing each slide
         const slidesToScrollValue = (eventsList.length > 9) ? 3 : 1;
 
